@@ -1,0 +1,17 @@
+# Deployment used by `npx convex dev`
+CONVEX_DEPLOYMENT=dev:shocking-cow-881 # team: hrishi-5d66d, project: splitsync
+
+NEXT_PUBLIC_CONVEX_URL=https://shocking-cow-881.convex.cloud
+
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_YWN0dWFsLWNhdHRsZS0zMy5jbGVyay5hY2NvdW50cy5kZXYk
+CLERK_SECRET_KEY=sk_test_Rv6MjPVC94igITUa2J5R5YvX76N1tKuLPWL0jPFNi3
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+
+CLERK_JWT_ISSUER_DOMAIN=https://actual-cattle-33.clerk.accounts.dev
+
+RESEND_API_KEY=re_EsUPZLH1_2ZNYdC3rY6YZmzSTHV9dPkfw
+
+GEMINI_API_KEY=AIzaSyBjlVuzzMt-Zo6OpPJCnekh_YumtMBrFR4
