@@ -11,7 +11,7 @@ const isProtectedRoute = createRouteMatcher([
 
 export default clerkMiddleware((auth, req) => {
   if (isProtectedRoute(req)) {
-    auth().protect(); // ✅ handles redirect automatically
+    auth().protect();
   }
 });
 
@@ -21,3 +21,5 @@ export const config = {
     "/(api|trpc)(.*)",
   ],
 };
+
+export const runtime = "edge";
