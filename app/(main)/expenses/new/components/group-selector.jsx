@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useConvexQuery } from "@/hooks/use-convex-query";
 import { api } from "@/convex/_generated/api";
 import { BarLoader } from "react-spinners";
@@ -14,37 +14,31 @@ import {
 } from "@/components/ui/select";
 
 export function GroupSelector({ onChange, defaultGroupId = "" }) {
-  const [selectedGroupId, setSelectedGroupId] = useState("");
+  const [selectedGroupId, setSelectedGroupId] = useState(defaultGroupId || "");
+  const onChangeRef = useRef(onChange);
 
-  // Single query to get all data we need
+  // Keep the ref current without adding onChange to effect deps
+  useEffect(() => {
+    onChangeRef.current = onChange;
+  });
+
   const { data, isLoading } = useConvexQuery(
     api.groups.getGroupOrMembers,
     selectedGroupId ? { groupId: selectedGroupId } : {}
   );
 
-  // When group data changes, notify parent
+  // Notify parent when selected group data arrives — use ref to avoid loop
   useEffect(() => {
-    if (data?.selectedGroup && onChange) {
-      onChange(data.selectedGroup);
+    if (data?.selectedGroup) {
+      onChangeRef.current?.(data.selectedGroup);
     }
-  }, [data, onChange]);
+  }, [data?.selectedGroup]);
 
   const handleGroupChange = (groupId) => {
     setSelectedGroupId(groupId);
   };
 
-  useEffect(() => {
-    if (!defaultGroupId && selectedGroupId) {
-      setSelectedGroupId("");
-      return;
-    }
-
-    if (defaultGroupId && defaultGroupId !== selectedGroupId) {
-      setSelectedGroupId(defaultGroupId);
-    }
-  }, [defaultGroupId, selectedGroupId]);
-
-  if (isLoading) {
+  if (isLoading && !data) {
     return <BarLoader width={"100%"} color="#36d7b7" />;
   }
 
