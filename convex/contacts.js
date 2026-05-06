@@ -1,17 +1,12 @@
-// convex/contacts.js
 import { query, mutation } from "./_generated/server";
 import { v } from "convex/values";
 import { internal } from "./_generated/api";
 
-/* ──────────────────────────────────────────────────────────────────────────
-   1. getAllContacts – 1‑to‑1 expense contacts + groups
-   ──────────────────────────────────────────────────────────────────────── */
 export const getAllContacts = query({
   handler: async (ctx) => {
-    // Use the centralized getCurrentUser instead of duplicating auth logic
     const currentUser = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!currentUser) return { users: [], groups: [] };
 
-    /* ── personal expenses where YOU are the payer ─────────────────────── */
     const expensesYouPaid = await ctx.db
       .query("expenses")
       .withIndex("by_user_and_group", (q) =>
@@ -19,11 +14,10 @@ export const getAllContacts = query({
       )
       .collect();
 
-    /* ── personal expenses where YOU are **not** the payer ─────────────── */
     const expensesNotPaidByYou = (
       await ctx.db
         .query("expenses")
-        .withIndex("by_group", (q) => q.eq("groupId", undefined)) // only 1‑to‑1
+        .withIndex("by_group", (q) => q.eq("groupId", undefined))
         .collect()
     ).filter(
       (e) =>
@@ -33,34 +27,21 @@ export const getAllContacts = query({
 
     const personalExpenses = [...expensesYouPaid, ...expensesNotPaidByYou];
 
-    /* ── extract unique counterpart IDs ─────────────────────────────────── */
     const contactIds = new Set();
     personalExpenses.forEach((exp) => {
-      if (exp.paidByUserId !== currentUser._id)
-        contactIds.add(exp.paidByUserId);
-
+      if (exp.paidByUserId !== currentUser._id) contactIds.add(exp.paidByUserId);
       exp.splits.forEach((s) => {
         if (s.userId !== currentUser._id) contactIds.add(s.userId);
       });
     });
 
-    /* ── fetch user docs ───────────────────────────────────────────────── */
     const contactUsers = await Promise.all(
       [...contactIds].map(async (id) => {
         const u = await ctx.db.get(id);
-        return u
-          ? {
-              id: u._id,
-              name: u.name,
-              email: u.email,
-              imageUrl: u.imageUrl,
-              type: "user",
-            }
-          : null;
+        return u ? { id: u._id, name: u.name, email: u.email, imageUrl: u.imageUrl, type: "user" } : null;
       })
     );
 
-    /* ── groups where current user is a member ─────────────────────────── */
     const userGroups = (await ctx.db.query("groups").collect())
       .filter((g) => g.members.some((m) => m.userId === currentUser._id))
       .map((g) => ({
@@ -71,7 +52,6 @@ export const getAllContacts = query({
         type: "group",
       }));
 
-    /* sort alphabetically */
     contactUsers.sort((a, b) => a?.name.localeCompare(b?.name));
     userGroups.sort((a, b) => a.name.localeCompare(b.name));
 
@@ -79,9 +59,6 @@ export const getAllContacts = query({
   },
 });
 
-/* ──────────────────────────────────────────────────────────────────────────
-   2. createGroup – create a new group
-   ──────────────────────────────────────────────────────────────────────── */
 export const createGroup = mutation({
   args: {
     name: v.string(),
@@ -89,18 +66,16 @@ export const createGroup = mutation({
     members: v.array(v.id("users")),
   },
   handler: async (ctx, args) => {
-    // Use the centralized getCurrentUser instead of duplicating auth logic
     const currentUser = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!currentUser) throw new Error("Not authenticated");
 
     if (!args.name.trim()) throw new Error("Group name cannot be empty");
 
     const uniqueMembers = new Set(args.members);
-    uniqueMembers.add(currentUser._id); // ensure creator
+    uniqueMembers.add(currentUser._id);
 
-    // Validate that all member users exist
     for (const id of uniqueMembers) {
-      if (!(await ctx.db.get(id)))
-        throw new Error(`User with ID ${id} not found`);
+      if (!(await ctx.db.get(id))) throw new Error(`User with ID ${id} not found`);
     }
 
     return await ctx.db.insert("groups", {

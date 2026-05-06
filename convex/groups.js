@@ -5,34 +5,25 @@ import { isExpenseApproved } from "../lib/expense-approval";
 
 export const getGroupOrMembers = query({
   args: {
-    groupId: v.optional(v.id("groups")), // Optional - if provided, will return details for just this group
+    groupId: v.optional(v.id("groups")),
   },
   handler: async (ctx, args) => {
-    // Use centralized getCurrentUser function
     const currentUser = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!currentUser) return { selectedGroup: null, groups: [] };
 
-    // Get all groups where the user is a member
     const allGroups = await ctx.db.query("groups").collect();
     const userGroups = allGroups.filter((group) =>
       group.members.some((member) => member.userId === currentUser._id)
     );
 
-    // If a specific group ID is provided, only return details for that group
     if (args.groupId) {
-      const selectedGroup = userGroups.find(
-        (group) => group._id === args.groupId
-      );
+      const selectedGroup = userGroups.find((group) => group._id === args.groupId);
+      if (!selectedGroup) throw new Error("Group not found or you're not a member");
 
-      if (!selectedGroup) {
-        throw new Error("Group not found or you're not a member");
-      }
-
-      // Get all user details for this group's members
       const memberDetails = await Promise.all(
         selectedGroup.members.map(async (member) => {
           const user = await ctx.db.get(member.userId);
           if (!user) return null;
-
           return {
             id: user._id,
             name: user.name,
@@ -43,10 +34,8 @@ export const getGroupOrMembers = query({
         })
       );
 
-      // Filter out any null values (in case a user was deleted)
       const validMembers = memberDetails.filter((member) => member !== null);
 
-      // Return selected group with member details
       return {
         selectedGroup: {
           id: selectedGroup._id,
@@ -64,7 +53,6 @@ export const getGroupOrMembers = query({
         })),
       };
     } else {
-      // Just return the list of groups without member details
       return {
         selectedGroup: null,
         groups: userGroups.map((group) => ({
@@ -78,19 +66,14 @@ export const getGroupOrMembers = query({
   },
 });
 
-// Get expenses for a specific group
 export const getGroupExpenses = query({
   args: { groupId: v.id("groups") },
   handler: async (ctx, { groupId }) => {
-    // Use centralized getCurrentUser function
     const currentUser = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!currentUser) return { deleted: false, group: null, members: [], expenses: [], pendingExpenses: [], settlements: [], balances: [], userLookupMap: {}, groupSpent: 0 };
 
     const group = await ctx.db.get(groupId);
-    if (!group) {
-      // This can happen right after deletion while clients are still subscribed.
-      // Return a sentinel payload so the UI can redirect without throwing.
-      return { deleted: true };
-    }
+    if (!group) return { deleted: true };
 
     if (!group.members.some((m) => m.userId === currentUser._id))
       throw new Error("You are not a member of this group");
@@ -102,7 +85,6 @@ export const getGroupExpenses = query({
 
     const approvedExpenses = expenses.filter((expense) => isExpenseApproved(expense));
     const pendingExpenses = expenses.filter((expense) => !isExpenseApproved(expense));
-
     const groupSpent = approvedExpenses.reduce((sum, expense) => sum + expense.amount, 0);
 
     const settlements = await ctx.db
@@ -110,7 +92,6 @@ export const getGroupExpenses = query({
       .filter((q) => q.eq(q.field("groupId"), groupId))
       .collect();
 
-    /* ----------  member map ---------- */
     const memberDetails = await Promise.all(
       group.members.map(async (m) => {
         const u = await ctx.db.get(m.userId);
@@ -119,84 +100,54 @@ export const getGroupExpenses = query({
     );
     const ids = memberDetails.map((m) => m.id);
 
-    /* ----------  ledgers ---------- */
-    // total net balance (old behaviour)
     const totals = Object.fromEntries(ids.map((id) => [id, 0]));
-    // pair‑wise ledger  debtor -> creditor -> amount
     const ledger = {};
     ids.forEach((a) => {
       ledger[a] = {};
-      ids.forEach((b) => {
-        if (a !== b) ledger[a][b] = 0;
-      });
+      ids.forEach((b) => { if (a !== b) ledger[a][b] = 0; });
     });
 
-    /* ----------  apply expenses ---------- */
     for (const exp of approvedExpenses) {
       const payer = exp.paidByUserId;
       for (const split of exp.splits) {
-        if (split.userId === payer || split.paid) continue; // skip payer & settled
+        if (split.userId === payer || split.paid) continue;
         const debtor = split.userId;
         const amt = split.amount;
-
         totals[payer] += amt;
         totals[debtor] -= amt;
-
-        ledger[debtor][payer] += amt; // debtor owes payer
+        ledger[debtor][payer] += amt;
       }
     }
 
-    /* ----------  apply settlements ---------- */
     for (const s of settlements) {
       totals[s.paidByUserId] += s.amount;
       totals[s.receivedByUserId] -= s.amount;
-
-      ledger[s.paidByUserId][s.receivedByUserId] -= s.amount; // they paid back
+      ledger[s.paidByUserId][s.receivedByUserId] -= s.amount;
     }
 
-    /* ----------  net the pair‑wise ledger ---------- */
     ids.forEach((a) => {
       ids.forEach((b) => {
-        if (a >= b) return; // visit each unordered pair once
-        
-        // Only net out direct reciprocal debts between the same two people
-        // Don't create new direct debts when original debts involve different creditors
+        if (a >= b) return;
         const aOwesB = ledger[a][b];
         const bOwesA = ledger[b][a];
-        
         if (aOwesB > 0 && bOwesA > 0) {
-          // Both owe each other, net them out
           const diff = aOwesB - bOwesA;
-          if (diff > 0) {
-            ledger[a][b] = diff;
-            ledger[b][a] = 0;
-          } else if (diff < 0) {
-            ledger[b][a] = -diff;
-            ledger[a][b] = 0;
-          } else {
-            ledger[a][b] = ledger[b][a] = 0;
-          }
+          if (diff > 0) { ledger[a][b] = diff; ledger[b][a] = 0; }
+          else if (diff < 0) { ledger[b][a] = -diff; ledger[a][b] = 0; }
+          else { ledger[a][b] = ledger[b][a] = 0; }
         }
-        // If only one direction exists, keep it as is
       });
     });
 
-    /* ----------  shape the response ---------- */
     const balances = memberDetails.map((m) => ({
       ...m,
       totalBalance: totals[m.id],
-      owes: Object.entries(ledger[m.id])
-        .filter(([, v]) => v > 0)
-        .map(([to, amount]) => ({ to, amount })),
-      owedBy: ids
-        .filter((other) => ledger[other][m.id] > 0)
-        .map((other) => ({ from: other, amount: ledger[other][m.id] })),
+      owes: Object.entries(ledger[m.id]).filter(([, v]) => v > 0).map(([to, amount]) => ({ to, amount })),
+      owedBy: ids.filter((other) => ledger[other][m.id] > 0).map((other) => ({ from: other, amount: ledger[other][m.id] })),
     }));
 
     const userLookupMap = {};
-    memberDetails.forEach((member) => {
-      userLookupMap[member.id] = member;
-    });
+    memberDetails.forEach((member) => { userLookupMap[member.id] = member; });
 
     return {
       deleted: false,
@@ -220,22 +171,17 @@ export const getGroupExpenses = query({
 });
 
 export const updateGroupApprovalMode = mutation({
-  args: {
-    groupId: v.id("groups"),
-    approvalRequired: v.boolean(),
-  },
+  args: { groupId: v.id("groups"), approvalRequired: v.boolean() },
   handler: async (ctx, { groupId, approvalRequired }) => {
     const currentUser = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!currentUser) throw new Error("Not authenticated");
 
     const group = await ctx.db.get(groupId);
     if (!group) throw new Error("Group not found");
 
     const myMembership = group.members.find((m) => m.userId === currentUser._id);
-    const canEdit =
-      group.createdBy === currentUser._id || myMembership?.role === "admin";
-    if (!canEdit) {
-      throw new Error("You don't have permission to update this group");
-    }
+    const canEdit = group.createdBy === currentUser._id || myMembership?.role === "admin";
+    if (!canEdit) throw new Error("You don't have permission to update this group");
 
     await ctx.db.patch(groupId, { approvalRequired });
     return { success: true };
@@ -243,29 +189,22 @@ export const updateGroupApprovalMode = mutation({
 });
 
 export const approveExpense = mutation({
-  args: {
-    groupId: v.id("groups"),
-    expenseId: v.id("expenses"),
-  },
+  args: { groupId: v.id("groups"), expenseId: v.id("expenses") },
   handler: async (ctx, { groupId, expenseId }) => {
     const currentUser = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!currentUser) throw new Error("Not authenticated");
 
     const group = await ctx.db.get(groupId);
     if (!group) throw new Error("Group not found");
 
     const myMembership = group.members.find((m) => m.userId === currentUser._id);
-    const canEdit =
-      group.createdBy === currentUser._id || myMembership?.role === "admin";
-    if (!canEdit) {
-      throw new Error("You don't have permission to approve expenses");
-    }
+    const canEdit = group.createdBy === currentUser._id || myMembership?.role === "admin";
+    if (!canEdit) throw new Error("You don't have permission to approve expenses");
 
     const expense = await ctx.db.get(expenseId);
     if (!expense) throw new Error("Expense not found");
     if (expense.groupId !== groupId) throw new Error("Expense does not belong to this group");
-    if (expense.approvalStatus !== "pending") {
-      throw new Error("Expense is not pending approval");
-    }
+    if (expense.approvalStatus !== "pending") throw new Error("Expense is not pending approval");
 
     await ctx.db.patch(expenseId, { approvalStatus: "approved" });
     return { success: true };
@@ -273,29 +212,22 @@ export const approveExpense = mutation({
 });
 
 export const rejectExpense = mutation({
-  args: {
-    groupId: v.id("groups"),
-    expenseId: v.id("expenses"),
-  },
+  args: { groupId: v.id("groups"), expenseId: v.id("expenses") },
   handler: async (ctx, { groupId, expenseId }) => {
     const currentUser = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!currentUser) throw new Error("Not authenticated");
 
     const group = await ctx.db.get(groupId);
     if (!group) throw new Error("Group not found");
 
     const myMembership = group.members.find((m) => m.userId === currentUser._id);
-    const canEdit =
-      group.createdBy === currentUser._id || myMembership?.role === "admin";
-    if (!canEdit) {
-      throw new Error("You don't have permission to reject expenses");
-    }
+    const canEdit = group.createdBy === currentUser._id || myMembership?.role === "admin";
+    if (!canEdit) throw new Error("You don't have permission to reject expenses");
 
     const expense = await ctx.db.get(expenseId);
     if (!expense) throw new Error("Expense not found");
     if (expense.groupId !== groupId) throw new Error("Expense does not belong to this group");
-    if (expense.approvalStatus !== "pending") {
-      throw new Error("Expense is not pending approval");
-    }
+    if (expense.approvalStatus !== "pending") throw new Error("Expense is not pending approval");
 
     await ctx.db.delete(expenseId);
     return { success: true };
@@ -303,29 +235,22 @@ export const rejectExpense = mutation({
 });
 
 export const updateGroupBudgetGoal = mutation({
-  args: {
-    groupId: v.id("groups"),
-    budgetGoal: v.number(),
-  },
+  args: { groupId: v.id("groups"), budgetGoal: v.number() },
   handler: async (ctx, { groupId, budgetGoal }) => {
     const currentUser = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!currentUser) throw new Error("Not authenticated");
 
     const group = await ctx.db.get(groupId);
     if (!group) throw new Error("Group not found");
 
     const myMembership = group.members.find((m) => m.userId === currentUser._id);
-    const canEdit =
-      group.createdBy === currentUser._id || myMembership?.role === "admin";
-    if (!canEdit) {
-      throw new Error("You don't have permission to update this group");
-    }
+    const canEdit = group.createdBy === currentUser._id || myMembership?.role === "admin";
+    if (!canEdit) throw new Error("You don't have permission to update this group");
 
-    if (!Number.isFinite(budgetGoal) || budgetGoal <= 0) {
+    if (!Number.isFinite(budgetGoal) || budgetGoal <= 0)
       throw new Error("Budget goal must be a positive number");
-    }
 
     await ctx.db.patch(groupId, { budgetGoal });
-
     return { success: true };
   },
 });
@@ -334,38 +259,28 @@ export const deleteGroup = mutation({
   args: { groupId: v.id("groups") },
   handler: async (ctx, { groupId }) => {
     const currentUser = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!currentUser) throw new Error("Not authenticated");
 
     const group = await ctx.db.get(groupId);
     if (!group) throw new Error("Group not found");
 
     const myMembership = group.members.find((m) => m.userId === currentUser._id);
-    const canDelete =
-      group.createdBy === currentUser._id || myMembership?.role === "admin";
+    const canDelete = group.createdBy === currentUser._id || myMembership?.role === "admin";
     if (!canDelete) throw new Error("You don't have permission to delete this group");
 
-    // Delete group expenses
     const expenses = await ctx.db
       .query("expenses")
       .withIndex("by_group", (q) => q.eq("groupId", groupId))
       .collect();
+    for (const exp of expenses) await ctx.db.delete(exp._id);
 
-    for (const exp of expenses) {
-      await ctx.db.delete(exp._id);
-    }
-
-    // Delete group settlements
     const settlements = await ctx.db
       .query("settlements")
       .withIndex("by_group", (q) => q.eq("groupId", groupId))
       .collect();
+    for (const st of settlements) await ctx.db.delete(st._id);
 
-    for (const st of settlements) {
-      await ctx.db.delete(st._id);
-    }
-
-    // Finally delete the group itself
     await ctx.db.delete(groupId);
-
     return { success: true };
   },
 });

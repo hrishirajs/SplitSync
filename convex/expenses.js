@@ -2,10 +2,7 @@ import { internalMutation, internalQuery, mutation, query } from "./_generated/s
 import { v } from "convex/values";
 import { internal } from "./_generated/api";
 import { isExpenseApproved } from "../lib/expense-approval";
-import {
-  advanceNextRunUntilFuture,
-  getNextRecurrenceDate,
-} from "../lib/recurrence";
+import { advanceNextRunUntilFuture, getNextRecurrenceDate } from "../lib/recurrence";
 
 const expenseSplitShape = v.array(
   v.object({
@@ -35,15 +32,14 @@ const buildExpenseDocument = (args, user, overrides = {}) => ({
   createdBy: user._id,
 });
 
-// Create a new expense
 export const createExpense = mutation({
   args: {
     description: v.string(),
     amount: v.number(),
     category: v.optional(v.string()),
-    date: v.number(), // timestamp
+    date: v.number(),
     paidByUserId: v.id("users"),
-    splitType: v.string(), // "equal", "percentage", "exact"
+    splitType: v.string(),
     splits: expenseSplitShape,
     groupId: v.optional(v.id("groups")),
     receiptName: v.optional(v.string()),
@@ -52,52 +48,26 @@ export const createExpense = mutation({
     sourceTemplateId: v.optional(v.id("expenseTemplates")),
   },
   handler: async (ctx, args) => {
-    // Use centralized getCurrentUser function
     const user = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!user) throw new Error("Not authenticated");
 
-    // Verify that splits add up to the total amount (with small tolerance for floating point issues)
-    const totalSplitAmount = args.splits.reduce(
-      (sum, split) => sum + split.amount,
-      0
-    );
-    const tolerance = 0.01; // Allow for small rounding errors
-    if (Math.abs(totalSplitAmount - args.amount) > tolerance) {
+    const totalSplitAmount = args.splits.reduce((sum, split) => sum + split.amount, 0);
+    const tolerance = 0.01;
+    if (Math.abs(totalSplitAmount - args.amount) > tolerance)
       throw new Error("Split amounts must add up to the total expense amount");
-    }
 
-    // If there's a group, verify the user is a member
     if (args.groupId) {
       const group = await ctx.db.get(args.groupId);
-      if (!group) {
-        throw new Error("Group not found");
-      }
+      if (!group) throw new Error("Group not found");
 
-      const isMember = group.members.some(
-        (member) => member.userId === user._id
-      );
-      if (!isMember) {
-        throw new Error("You are not a member of this group");
-      }
+      const isMember = group.members.some((member) => member.userId === user._id);
+      if (!isMember) throw new Error("You are not a member of this group");
 
-      // If the group requires approval, new group expenses start pending.
       const approvalStatus = group.approvalRequired ? "pending" : "approved";
-
-      // Create the expense
-      const expenseId = await ctx.db.insert(
-        "expenses",
-        buildExpenseDocument(args, user, { approvalStatus })
-      );
-
-      return expenseId;
+      return await ctx.db.insert("expenses", buildExpenseDocument(args, user, { approvalStatus }));
     }
 
-    // Create the expense
-    const expenseId = await ctx.db.insert(
-      "expenses",
-      buildExpenseDocument(args, user)
-    );
-
-    return expenseId;
+    return await ctx.db.insert("expenses", buildExpenseDocument(args, user));
   },
 });
 
@@ -118,6 +88,7 @@ export const saveExpenseTemplate = mutation({
   },
   handler: async (ctx, args) => {
     const user = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!user) throw new Error("Not authenticated");
 
     return await ctx.db.insert("expenseTemplates", {
       description: args.description,
@@ -142,6 +113,7 @@ export const saveExpenseTemplate = mutation({
 export const getExpenseTemplates = query({
   handler: async (ctx) => {
     const user = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!user) return [];
 
     const templates = await ctx.db
       .query("expenseTemplates")
@@ -156,12 +128,12 @@ export const deleteExpenseTemplate = mutation({
   args: { templateId: v.id("expenseTemplates") },
   handler: async (ctx, args) => {
     const user = await ctx.runQuery(internal.users.getCurrentUser);
-    const template = await ctx.db.get(args.templateId);
+    if (!user) throw new Error("Not authenticated");
 
+    const template = await ctx.db.get(args.templateId);
     if (!template) throw new Error("Template not found");
-    if (template.createdBy !== user._id) {
+    if (template.createdBy !== user._id)
       throw new Error("You don't have permission to delete this template");
-    }
 
     await ctx.db.delete(args.templateId);
     return { success: true };
@@ -176,19 +148,14 @@ export const getDueRecurringExpenseTemplates = internalQuery({
       .withIndex("by_nextRunAt", (q) => q.lte("nextRunAt", now))
       .collect();
 
-    return templates.filter(
-      (template) => template.isRecurring && template.nextRunAt !== undefined
-    );
+    return templates.filter((template) => template.isRecurring && template.nextRunAt !== undefined);
   },
 });
 
 export const runRecurringExpenseTemplate = internalMutation({
-  args: {
-    templateId: v.id("expenseTemplates"),
-  },
+  args: { templateId: v.id("expenseTemplates") },
   handler: async (ctx, args) => {
     const template = await ctx.db.get(args.templateId);
-
     if (!template) throw new Error("Template not found");
     if (!template.isRecurring) throw new Error("Template is not recurring");
 
@@ -218,11 +185,7 @@ export const runRecurringExpenseTemplate = internalMutation({
     });
 
     const nextRunAt = advanceNextRunUntilFuture(
-      getNextRecurrenceDate(
-        occurrenceDate,
-        template.recurrenceFrequency,
-        template.recurrenceInterval
-      ),
+      getNextRecurrenceDate(occurrenceDate, template.recurrenceFrequency, template.recurrenceInterval),
       template.recurrenceFrequency,
       template.recurrenceInterval
     );
@@ -237,41 +200,29 @@ export const runRecurringExpenseTemplate = internalMutation({
   },
 });
 
-// ----------- Expenses Page -----------
-
-// Get expenses between current user and a specific person
 export const getExpensesBetweenUsers = query({
   args: { userId: v.id("users") },
   handler: async (ctx, { userId }) => {
     const me = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!me) return null;
     if (me._id === userId) throw new Error("Cannot query yourself");
 
-    /* ───── 1. All expenses where BOTH are involved (1:1 + groups) ───── */
     const allExpenses = await ctx.db.query("expenses").collect();
     const expenses = allExpenses.filter((e) => {
-      const meInvolved =
-        e.paidByUserId === me._id || e.splits.some((s) => s.userId === me._id);
-      const themInvolved =
-        e.paidByUserId === userId || e.splits.some((s) => s.userId === userId);
+      const meInvolved = e.paidByUserId === me._id || e.splits.some((s) => s.userId === me._id);
+      const themInvolved = e.paidByUserId === userId || e.splits.some((s) => s.userId === userId);
       return meInvolved && themInvolved;
     });
 
     expenses.sort((a, b) => b.date - a.date);
 
-    /* ───── 2. Settlements between the two of us (1:1 + groups) ─────── */
     const settlements = await ctx.db
       .query("settlements")
       .filter((q) =>
         q.and(
           q.or(
-            q.and(
-              q.eq(q.field("paidByUserId"), me._id),
-              q.eq(q.field("receivedByUserId"), userId)
-            ),
-            q.and(
-              q.eq(q.field("paidByUserId"), userId),
-              q.eq(q.field("receivedByUserId"), me._id)
-            )
+            q.and(q.eq(q.field("paidByUserId"), me._id), q.eq(q.field("receivedByUserId"), userId)),
+            q.and(q.eq(q.field("paidByUserId"), userId), q.eq(q.field("receivedByUserId"), me._id))
           )
         )
       )
@@ -279,76 +230,48 @@ export const getExpensesBetweenUsers = query({
 
     settlements.sort((a, b) => b.date - a.date);
 
-    /* ───── 3. Compute running balance ──────────────────────────────── */
     let balance = 0;
-
     for (const e of expenses) {
       if (!isExpenseApproved(e)) continue;
-      // Only calculate balance for direct debts between me and the other user
-      // Ignore expenses where a third party paid
       if (e.paidByUserId === me._id) {
-        // I paid, they owe me
         const split = e.splits.find((s) => s.userId === userId && !s.paid);
         if (split) balance += split.amount;
       } else if (e.paidByUserId === userId) {
-        // They paid, I owe them
         const split = e.splits.find((s) => s.userId === me._id && !s.paid);
         if (split) balance -= split.amount;
       }
-      // If a third party paid (neither me nor them), don't include in 1-on-1 balance
-      // This will be handled in group balances instead
     }
 
     for (const s of settlements) {
-      if (s.paidByUserId === me._id)
-        balance += s.amount; // I paid them back
-      else balance -= s.amount; // they paid me back
+      if (s.paidByUserId === me._id) balance += s.amount;
+      else balance -= s.amount;
     }
 
-    /* ───── 5. Return payload ───────────────────────────────────────── */
     const other = await ctx.db.get(userId);
     if (!other) throw new Error("User not found");
 
     return {
       expenses,
       settlements,
-      otherUser: {
-        id: other._id,
-        name: other.name,
-        email: other.email,
-        imageUrl: other.imageUrl,
-      },
+      otherUser: { id: other._id, name: other.name, email: other.email, imageUrl: other.imageUrl },
       balance,
     };
   },
 });
 
-// Delete an expense
 export const deleteExpense = mutation({
-  args: {
-    expenseId: v.id("expenses"),
-  },
+  args: { expenseId: v.id("expenses") },
   handler: async (ctx, args) => {
-    // Get the current user
     const user = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!user) throw new Error("Not authenticated");
 
-    // Get the expense
     const expense = await ctx.db.get(args.expenseId);
-    if (!expense) {
-      throw new Error("Expense not found");
-    }
+    if (!expense) throw new Error("Expense not found");
 
-    // Check if user is authorized to delete this expense
-    // Only the creator of the expense or the payer can delete it
-    if (expense.createdBy !== user._id && expense.paidByUserId !== user._id) {
+    if (expense.createdBy !== user._id && expense.paidByUserId !== user._id)
       throw new Error("You don't have permission to delete this expense");
-    }
 
-    // Delete any settlements that specifically reference this expense
-    // Since we can't use array.includes directly in the filter, we'll
-    // fetch all settlements and then filter in memory
     const allSettlements = await ctx.db.query("settlements").collect();
-
     const relatedSettlements = allSettlements.filter(
       (settlement) =>
         settlement.relatedExpenseIds !== undefined &&
@@ -356,25 +279,12 @@ export const deleteExpense = mutation({
     );
 
     for (const settlement of relatedSettlements) {
-      // Remove this expense ID from the relatedExpenseIds array
-      const updatedRelatedExpenseIds = settlement.relatedExpenseIds.filter(
-        (id) => id !== args.expenseId
-      );
-
-      if (updatedRelatedExpenseIds.length === 0) {
-        // If this was the only related expense, delete the settlement
-        await ctx.db.delete(settlement._id);
-      } else {
-        // Otherwise update the settlement to remove this expense ID
-        await ctx.db.patch(settlement._id, {
-          relatedExpenseIds: updatedRelatedExpenseIds,
-        });
-      }
+      const updatedRelatedExpenseIds = settlement.relatedExpenseIds.filter((id) => id !== args.expenseId);
+      if (updatedRelatedExpenseIds.length === 0) await ctx.db.delete(settlement._id);
+      else await ctx.db.patch(settlement._id, { relatedExpenseIds: updatedRelatedExpenseIds });
     }
 
-    // Delete the expense
     await ctx.db.delete(args.expenseId);
-
     return { success: true };
   },
 });
