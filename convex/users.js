@@ -24,12 +24,22 @@ export const store = mutation({
       return user._id;
     }
 
-    return await ctx.db.insert("users", {
+    // New user — insert and send welcome email
+    const userId = await ctx.db.insert("users", {
       name: identity.name ?? "Anonymous",
       tokenIdentifier: identity.tokenIdentifier,
       email: identity.email,
       imageUrl: identity.pictureUrl,
     });
+
+    if (identity.email) {
+      await ctx.scheduler.runAfter(0, internal.email.sendWelcomeEmail, {
+        email: identity.email,
+        name: identity.name ?? "there",
+      });
+    }
+
+    return userId;
   },
 });
 

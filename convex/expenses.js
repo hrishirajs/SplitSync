@@ -64,10 +64,28 @@ export const createExpense = mutation({
       if (!isMember) throw new Error("You are not a member of this group");
 
       const approvalStatus = group.approvalRequired ? "pending" : "approved";
-      return await ctx.db.insert("expenses", buildExpenseDocument(args, user, { approvalStatus }));
+      const expenseId = await ctx.db.insert(
+        "expenses",
+        buildExpenseDocument(args, user, { approvalStatus })
+      );
+
+      await ctx.scheduler.runAfter(0, internal.email.sendExpenseNotifications, {
+        expenseId,
+      });
+
+      return expenseId;
     }
 
-    return await ctx.db.insert("expenses", buildExpenseDocument(args, user));
+    const expenseId = await ctx.db.insert(
+      "expenses",
+      buildExpenseDocument(args, user)
+    );
+
+    await ctx.scheduler.runAfter(0, internal.email.sendExpenseNotifications, {
+      expenseId,
+    });
+
+    return expenseId;
   },
 });
 
@@ -148,7 +166,9 @@ export const getDueRecurringExpenseTemplates = internalQuery({
       .withIndex("by_nextRunAt", (q) => q.lte("nextRunAt", now))
       .collect();
 
-    return templates.filter((template) => template.isRecurring && template.nextRunAt !== undefined);
+    return templates.filter(
+      (template) => template.isRecurring && template.nextRunAt !== undefined
+    );
   },
 });
 
@@ -185,7 +205,11 @@ export const runRecurringExpenseTemplate = internalMutation({
     });
 
     const nextRunAt = advanceNextRunUntilFuture(
-      getNextRecurrenceDate(occurrenceDate, template.recurrenceFrequency, template.recurrenceInterval),
+      getNextRecurrenceDate(
+        occurrenceDate,
+        template.recurrenceFrequency,
+        template.recurrenceInterval
+      ),
       template.recurrenceFrequency,
       template.recurrenceInterval
     );
@@ -221,8 +245,14 @@ export const getExpensesBetweenUsers = query({
       .filter((q) =>
         q.and(
           q.or(
-            q.and(q.eq(q.field("paidByUserId"), me._id), q.eq(q.field("receivedByUserId"), userId)),
-            q.and(q.eq(q.field("paidByUserId"), userId), q.eq(q.field("receivedByUserId"), me._id))
+            q.and(
+              q.eq(q.field("paidByUserId"), me._id),
+              q.eq(q.field("receivedByUserId"), userId)
+            ),
+            q.and(
+              q.eq(q.field("paidByUserId"), userId),
+              q.eq(q.field("receivedByUserId"), me._id)
+            )
           )
         )
       )
@@ -253,7 +283,12 @@ export const getExpensesBetweenUsers = query({
     return {
       expenses,
       settlements,
-      otherUser: { id: other._id, name: other.name, email: other.email, imageUrl: other.imageUrl },
+      otherUser: {
+        id: other._id,
+        name: other.name,
+        email: other.email,
+        imageUrl: other.imageUrl,
+      },
       balance,
     };
   },
@@ -279,9 +314,16 @@ export const deleteExpense = mutation({
     );
 
     for (const settlement of relatedSettlements) {
-      const updatedRelatedExpenseIds = settlement.relatedExpenseIds.filter((id) => id !== args.expenseId);
-      if (updatedRelatedExpenseIds.length === 0) await ctx.db.delete(settlement._id);
-      else await ctx.db.patch(settlement._id, { relatedExpenseIds: updatedRelatedExpenseIds });
+      const updatedRelatedExpenseIds = settlement.relatedExpenseIds.filter(
+        (id) => id !== args.expenseId
+      );
+      if (updatedRelatedExpenseIds.length === 0) {
+        await ctx.db.delete(settlement._id);
+      } else {
+        await ctx.db.patch(settlement._id, {
+          relatedExpenseIds: updatedRelatedExpenseIds,
+        });
+      }
     }
 
     await ctx.db.delete(args.expenseId);
