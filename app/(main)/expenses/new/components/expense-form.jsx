@@ -38,7 +38,6 @@ import {
   getRecurrenceLabel,
 } from "@/lib/recurrence";
 
-// Form schema validation
 const expenseSchema = z.object({
   description: z.string().min(1, "Description is required"),
   amount: z
@@ -67,7 +66,6 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
   const [recurrenceFrequency, setRecurrenceFrequency] = useState("monthly");
   const [recurrenceInterval, setRecurrenceInterval] = useState(1);
 
-  // Mutations and queries
   const { data: currentUser } = useConvexQuery(api.users.getCurrentUser);
   const { data: expenseTemplates } = useConvexQuery(api.expenses.getExpenseTemplates);
 
@@ -77,7 +75,6 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
   const categories = getAllCategories();
   const defaultCategoryId = categories[0]?.id || "other";
 
-  // Set up form with validation
   const {
     register,
     handleSubmit,
@@ -98,7 +95,6 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
     },
   });
 
-  // Watch for changes
   const amountValue = watch("amount");
   const paidByUserId = watch("paidByUserId");
   const groupIdValue = watch("groupId");
@@ -113,20 +109,18 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
 
     setValue("description", template.description || "", { shouldDirty: true });
     setValue("amount", template.amount?.toString() || "", { shouldDirty: true });
-    setValue("category", template.category || defaultCategoryId, {
-      shouldDirty: true,
-    });
+    setValue("category", template.category || defaultCategoryId, { shouldDirty: true });
     setValue("paidByUserId", template.paidByUserId, { shouldDirty: true });
     setValue("splitType", template.splitType || "equal", { shouldDirty: true });
     setValue("groupId", template.groupId || undefined, { shouldDirty: true });
     setParticipants(
       Array.isArray(template.splits)
         ? template.splits.map((split) => ({
-            id: split.userId,
-            name: split.name || split.email || "Unknown",
-            email: split.email || "",
-            imageUrl: split.imageUrl,
-          }))
+          id: split.userId,
+          name: split.name || split.email || "Unknown",
+          email: split.email || "",
+          imageUrl: split.imageUrl,
+        }))
         : []
     );
     setSplits(Array.isArray(template.splits) ? template.splits : []);
@@ -149,12 +143,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
       return;
     }
 
-    const allowedTypes = [
-      "image/jpeg",
-      "image/png",
-      "image/webp",
-      "application/pdf",
-    ];
+    const allowedTypes = ["image/jpeg", "image/png", "image/webp", "application/pdf"];
 
     if (!allowedTypes.includes(file.type)) {
       toast.error("Please upload a JPG, PNG, WEBP, or PDF receipt.");
@@ -202,10 +191,8 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
     setValue,
   ]);
 
-  // When a user is added or removed, update the participant list
   useEffect(() => {
     if (participants.length === 0 && currentUser) {
-      // Always add the current user as a participant
       setParticipants([
         {
           id: currentUser._id,
@@ -217,26 +204,23 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
     }
   }, [currentUser, participants]);
 
-  // Handle form submission
   const onSubmit = async (data) => {
     try {
       const amount = parseFloat(data.amount);
       const receiptSnapshot = receiptFile
         ? {
-            receiptName: receiptFile.name,
-            receiptType: receiptFile.type,
-            receiptDataUrl: receiptPreview,
-          }
+          receiptName: receiptFile.name,
+          receiptType: receiptFile.type,
+          receiptDataUrl: receiptPreview,
+        }
         : {};
 
-      // Prepare splits in the format expected by the API
       const formattedSplits = splits.map((split) => ({
         userId: split.userId,
         amount: split.amount,
         paid: split.userId === data.paidByUserId,
       }));
 
-      // Validate that splits add up to the total (with small tolerance)
       const totalSplitAmount = formattedSplits.reduce(
         (sum, split) => sum + split.amount,
         0
@@ -244,21 +228,17 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
       const tolerance = 0.01;
 
       if (Math.abs(totalSplitAmount - amount) > tolerance) {
-        toast.error(
-          `Split amounts don't add up to the total. Please adjust your splits.`
-        );
+        toast.error("Split amounts don't add up to the total. Please adjust your splits.");
         return;
       }
 
-      // For 1:1 / self expenses, set groupId to undefined instead of empty string
       const groupId = type === "individual" ? undefined : data.groupId;
 
-      // Create the expense
       await createExpense.mutate({
         description: data.description,
         amount: amount,
         category: data.category || "Other",
-        date: data.date.getTime(), // Convert to timestamp
+        date: data.date.getTime(),
         paidByUserId: data.paidByUserId,
         splitType: data.splitType,
         splits: formattedSplits,
@@ -268,28 +248,34 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
 
       if (saveAsFavorite || recurringEnabled) {
         try {
+          // Strip any extra fields (e.g. percentage) not allowed by the Convex validator
+          const cleanedSplits = splits.map(({ userId, amount, paid, name, email, imageUrl }) => ({
+            userId,
+            amount,
+            paid: paid ?? userId === data.paidByUserId,
+            ...(name && { name }),
+            ...(email && { email }),
+            ...(imageUrl && { imageUrl }),
+          }));
+
           await saveExpenseTemplate.mutate({
             description: data.description,
             amount,
             category: data.category || "Other",
             paidByUserId: data.paidByUserId,
             splitType: data.splitType,
-            splits,
+            splits: cleanedSplits,
             groupId,
             isFavorite: saveAsFavorite,
             isRecurring: recurringEnabled,
-            recurrenceFrequency: recurringEnabled
-              ? recurrenceFrequency
-              : undefined,
-            recurrenceInterval: recurringEnabled
-              ? recurrenceInterval
-              : undefined,
+            recurrenceFrequency: recurringEnabled ? recurrenceFrequency : undefined,
+            recurrenceInterval: recurringEnabled ? recurrenceInterval : undefined,
             nextRunAt: recurringEnabled
               ? getNextRecurrenceDate(
-                  data.date.getTime(),
-                  recurrenceFrequency,
-                  recurrenceInterval
-                )
+                data.date.getTime(),
+                recurrenceFrequency,
+                recurrenceInterval
+              )
               : undefined,
           });
         } catch (templateError) {
@@ -300,7 +286,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
       }
 
       toast.success("Expense created successfully!");
-      reset(); // Reset form
+      reset();
       {
         const nextDate = new Date();
         setSelectedDate(nextDate);
@@ -315,16 +301,10 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
       setSelectedGroup(null);
       setSplits([]);
 
-      // Figure out where to go after success
-      const otherParticipant = participants.find(
-        (p) => p.id !== currentUser._id
-      );
+      const otherParticipant = participants.find((p) => p.id !== currentUser._id);
       const otherUserId = otherParticipant?.id || null;
 
       if (onSuccess) {
-        // For individual:
-        // - if there is another user, pass their id (1:1 expense)
-        // - if not, pass null (self-only; caller can route to a generic list)
         onSuccess(type === "individual" ? otherUserId : groupId);
       }
     } catch (error) {
@@ -334,7 +314,6 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
 
   if (!currentUser) return null;
 
-  // Helper flags
   const isGroupExpense = type === "group";
   const needsAtLeastTwoParticipants = isGroupExpense;
   const submitDisabled =
@@ -392,9 +371,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
                     className="h-8 w-8 text-red-500 hover:text-red-700 hover:bg-red-50"
                     onClick={async () => {
                       try {
-                        await deleteExpenseTemplate.mutate({
-                          templateId: template._id,
-                        });
+                        await deleteExpenseTemplate.mutate({ templateId: template._id });
                         toast.success("Template removed");
                       } catch (error) {
                         toast.error("Failed to delete template: " + error.message);
@@ -421,7 +398,6 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
       )}
 
       <div className="space-y-4">
-        {/* Description and amount */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="description">Description</Label>
@@ -431,9 +407,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
               {...register("description")}
             />
             {errors.description && (
-              <p className="text-sm text-red-500">
-                {errors.description.message}
-              </p>
+              <p className="text-sm text-red-500">{errors.description.message}</p>
             )}
           </div>
 
@@ -453,7 +427,6 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
           </div>
         </div>
 
-        {/* Category and date */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="category">Category</Label>
@@ -466,9 +439,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
                 setValue("category", event.target.value, { shouldDirty: true });
               }}
             >
-              <option value="" disabled>
-                Select a category
-              </option>
+              <option value="" disabled>Select a category</option>
               {categories.map((category) => (
                 <option key={category.id} value={category.id}>
                   {category.name}
@@ -477,15 +448,13 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
             </select>
             {categorySuggestion?.categoryId && !categoryTouched && (
               <p className="text-xs text-emerald-600">
-                Auto-selected {categorySuggestion.categoryName.toLowerCase()} from
-                the description.
+                Auto-selected {categorySuggestion.categoryName.toLowerCase()} from the description.
               </p>
             )}
             {categorySuggestion?.categoryId && categoryTouched && (
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <span>
-                  Suggested {categorySuggestion.categoryName.toLowerCase()} based
-                  on the description.
+                  Suggested {categorySuggestion.categoryName.toLowerCase()} based on the description.
                 </span>
                 {categoryValue !== categorySuggestion.categoryId && (
                   <Button
@@ -494,9 +463,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
                     className="h-auto p-0 text-xs text-emerald-600 hover:text-emerald-700"
                     onClick={() => {
                       setCategoryTouched(false);
-                      setValue("category", categorySuggestion.categoryId, {
-                        shouldDirty: true,
-                      });
+                      setValue("category", categorySuggestion.categoryId, { shouldDirty: true });
                     }}
                   >
                     Use suggestion
@@ -518,11 +485,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
                   )}
                 >
                   <CalendarIcon className="mr-2 h-4 w-4" />
-                  {selectedDate ? (
-                    format(selectedDate, "PPP")
-                  ) : (
-                    <span>Pick a date</span>
-                  )}
+                  {selectedDate ? format(selectedDate, "PPP") : <span>Pick a date</span>}
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0">
@@ -540,41 +503,32 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
           </div>
         </div>
 
-        {/* Group selector (for group expenses) */}
         {isGroupExpense && (
           <div className="space-y-2">
             <Label>Group</Label>
             <GroupSelector
               defaultGroupId={groupIdValue || ""}
               onChange={(group) => {
-                // Only update if the group has changed to prevent loops
                 if (!selectedGroup || selectedGroup.id !== group.id) {
                   setSelectedGroup(group);
                   setValue("groupId", group.id);
-
-                  // Update participants with the group members
                   if (group.members && Array.isArray(group.members)) {
-                    // Set the participants once, don't re-set if they're the same
                     setParticipants(group.members);
                   }
                 }
               }}
             />
             {!selectedGroup && (
-              <p className="text-xs text-amber-600">
-                Please select a group to continue
-              </p>
+              <p className="text-xs text-amber-600">Please select a group to continue</p>
             )}
             {selectedGroup?.approvalRequired && (
               <p className="text-xs text-amber-600">
-                This group requires approval, so new expenses will stay pending
-                until an admin approves them.
+                This group requires approval, so new expenses will stay pending until an admin approves them.
               </p>
             )}
           </div>
         )}
 
-        {/* Participants (for individual expenses) */}
         {!isGroupExpense && (
           <div className="space-y-2">
             <Label>Participants</Label>
@@ -582,11 +536,9 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
               participants={participants}
               onParticipantsChange={setParticipants}
             />
-            {/* For individual expenses we allow self-only, so no warning here */}
           </div>
         )}
 
-        {/* Paid by selector */}
         <div className="space-y-2">
           <Label>Paid by</Label>
           <select
@@ -601,28 +553,20 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
             ))}
           </select>
           {errors.paidByUserId && (
-            <p className="text-sm text-red-500">
-              {errors.paidByUserId.message}
-            </p>
+            <p className="text-sm text-red-500">{errors.paidByUserId.message}</p>
           )}
         </div>
 
-        {/* Split type */}
         <div className="space-y-2">
           <Label>Split type</Label>
-          <Tabs
-            defaultValue="equal"
-            onValueChange={(value) => setValue("splitType", value)}
-          >
+          <Tabs defaultValue="equal" onValueChange={(value) => setValue("splitType", value)}>
             <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="equal">Equal</TabsTrigger>
               <TabsTrigger value="percentage">Percentage</TabsTrigger>
               <TabsTrigger value="exact">Exact Amounts</TabsTrigger>
             </TabsList>
             <TabsContent value="equal" className="pt-4">
-              <p className="text-sm text-muted-foreground">
-                Split equally among all participants
-              </p>
+              <p className="text-sm text-muted-foreground">Split equally among all participants</p>
               <SplitSelector
                 type="equal"
                 amount={parseFloat(amountValue) || 0}
@@ -632,9 +576,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
               />
             </TabsContent>
             <TabsContent value="percentage" className="pt-4">
-              <p className="text-sm text-muted-foreground">
-                Split by percentage
-              </p>
+              <p className="text-sm text-muted-foreground">Split by percentage</p>
               <SplitSelector
                 type="percentage"
                 amount={parseFloat(amountValue) || 0}
@@ -644,9 +586,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
               />
             </TabsContent>
             <TabsContent value="exact" className="pt-4">
-              <p className="text-sm text-muted-foreground">
-                Enter exact amounts
-              </p>
+              <p className="text-sm text-muted-foreground">Enter exact amounts</p>
               <SplitSelector
                 type="exact"
                 amount={parseFloat(amountValue) || 0}
@@ -676,12 +616,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
               <div className="rounded-md bg-muted/40 p-3 text-sm space-y-2">
                 <div className="flex items-center justify-between gap-2">
                   <span className="font-medium">{receiptFile.name}</span>
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    size="sm"
-                    onClick={clearReceipt}
-                  >
+                  <Button type="button" variant="ghost" size="sm" onClick={clearReceipt}>
                     Clear
                   </Button>
                 </div>
@@ -692,15 +627,11 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
                     className="max-h-48 rounded-md object-contain"
                   />
                 ) : (
-                  <p className="text-xs text-muted-foreground">
-                    PDF receipt attached.
-                  </p>
+                  <p className="text-xs text-muted-foreground">PDF receipt attached.</p>
                 )}
               </div>
             ) : (
-              <p className="text-xs text-muted-foreground">
-                JPG, PNG, WEBP, or PDF up to 1.5 MB.
-              </p>
+              <p className="text-xs text-muted-foreground">JPG, PNG, WEBP, or PDF up to 1.5 MB.</p>
             )}
           </div>
 
@@ -731,9 +662,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
                     id="recurrenceFrequency"
                     className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                     value={recurrenceFrequency}
-                    onChange={(event) =>
-                      setRecurrenceFrequency(event.target.value)
-                    }
+                    onChange={(event) => setRecurrenceFrequency(event.target.value)}
                   >
                     {RECURRENCE_FREQUENCIES.map((frequency) => (
                       <option key={frequency.id} value={frequency.id}>
@@ -752,9 +681,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
                     step="1"
                     value={recurrenceInterval}
                     onChange={(event) =>
-                      setRecurrenceInterval(
-                        Math.max(1, parseInt(event.target.value, 10) || 1)
-                      )
+                      setRecurrenceInterval(Math.max(1, parseInt(event.target.value, 10) || 1))
                     }
                   />
                 </div>
