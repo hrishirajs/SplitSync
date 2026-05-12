@@ -1,0 +1,279 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/7y1kre1w",
+    "id": "7y1kre1w",
+    "slide": 16,
+    "layoutId": "/ppt/slideLayouts/slideLayout16.xml",
+    "layoutName": "Slide 15 master",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1536,
+      "height": 864
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "typefaces": [
+      "+mn-lt",
+      "Gelasio",
+      "Lato"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout16.xml",
+      "name": "Slide 15 master",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout16.xml/4",
+          "id": "4",
+          "name": "Image 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout16.xml/3",
+          "id": "3",
+          "name": "Shape 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "geometry": "rect",
+          "fillColor": "rgba(255, 255, 255, 0.95)"
+        },
+        {
+          "order": 3,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout16.xml/5",
+          "id": "5",
+          "name": "Image 1",
+          "bbox": [
+            1347.95,
+            813.6,
+            180.85,
+            43.2
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          }
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/7mp0bi9s",
+      "id": "6",
+      "name": "Image 0",
+      "bbox": [
+        75.45,
+        73.21,
+        514.15,
+        717.58
+      ],
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "/ppt/media/image73.png",
+        "contentType": "image/png",
+        "byteLength": 350040
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image73.png",
+        "contentType": "image/png",
+        "byteLength": 350040
+      }
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rytsvu9k",
+      "id": "3",
+      "name": "Text 0",
+      "bbox": [
+        791.81,
+        366.09,
+        497.7,
+        58.95
+      ],
+      "geometry": "rect",
+      "text": "Record Settlement Page",
+      "textPreview": "Record Settlement Page",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Record Settlement Page"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Record Settlement Page",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Record Settlement Page",
+              "fontSize": 46.67,
+              "typeface": "Gelasio",
+              "color": "#312F2B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g7adsji5",
+      "id": "4",
+      "name": "Text 1",
+      "bbox": [
+        791.81,
+        442.11,
+        669.54,
+        57.5
+      ],
+      "geometry": "rect",
+      "text": "Enables users to settle dues and record payments, ensuring accurate tracking of cleared balances.",
+      "textPreview": "Enables users to settle dues and record payments, ensuring accurate tracking of cleared balances.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Enables users to settle dues and record payments, ensuring accurate tracking"
+          },
+          {
+            "index": 2,
+            "text": "of cleared balances."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Enables users to settle dues and record payments, ensuring accurate tracking of cleared balances.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Enables users to settle dues and record payments, ensuring accurate tracking of cleared balances.",
+              "fontSize": 18.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9s36hcrm",
+      "id": "5",
+      "name": "Rectangle 4",
+      "bbox": [
+        1350.67,
+        812,
+        185.33,
+        52
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#FEFEFD"
+    }
+  ],
+  "composeRuns": []
+}

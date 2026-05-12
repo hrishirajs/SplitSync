@@ -1,0 +1,838 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/54zidony",
+    "id": "54zidony",
+    "slide": 18,
+    "layoutId": "/ppt/slideLayouts/slideLayout18.xml",
+    "layoutName": "Slide 17 master",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1536,
+      "height": 864
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "typefaces": [
+      "+mn-lt",
+      "Gelasio",
+      "Lato"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout18.xml",
+      "name": "Slide 17 master",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout18.xml/4",
+          "id": "4",
+          "name": "Image 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout18.xml/3",
+          "id": "3",
+          "name": "Shape 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "geometry": "rect",
+          "fillColor": "rgba(255, 255, 255, 0.95)"
+        },
+        {
+          "order": 3,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout18.xml/5",
+          "id": "5",
+          "name": "Image 1",
+          "bbox": [
+            1347.95,
+            813.6,
+            180.85,
+            43.2
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          }
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x0nuxc3y",
+      "id": "2",
+      "name": "Text 0",
+      "bbox": [
+        83.34,
+        86.59,
+        520.93,
+        65.1
+      ],
+      "geometry": "rect",
+      "text": "Conclusion",
+      "textPreview": "Conclusion",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Conclusion"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Conclusion",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Conclusion",
+              "fontSize": 52,
+              "typeface": "Gelasio",
+              "color": "#312F2B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4fu18jqh",
+      "id": "3",
+      "name": "Shape 1",
+      "bbox": [
+        83.34,
+        182.94,
+        46.87,
+        46.87
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fil0rqd4",
+      "id": "4",
+      "name": "Text 2",
+      "bbox": [
+        151.04,
+        190.1,
+        312.53,
+        32.56
+      ],
+      "geometry": "rect",
+      "text": "Simple & Efficient Solution",
+      "textPreview": "Simple & Efficient Solution",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Simple & Efficient Solution"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Simple & Efficient Solution",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Simple & Efficient Solution",
+              "fontSize": 26,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qxs72x4n",
+      "id": "5",
+      "name": "Text 3",
+      "bbox": [
+        151.04,
+        235.16,
+        1301.62,
+        33.34
+      ],
+      "geometry": "rect",
+      "text": "SplitSync offers a user-friendly and highly effective way to manage shared expenses among groups.",
+      "textPreview": "SplitSync offers a user-friendly and highly effective way to manage shared expenses among groups.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SplitSync offers a user-friendly and highly effective way to manage shared expenses among groups."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SplitSync offers a user-friendly and highly effective way to manage shared expenses among groups.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "SplitSync offers a user-friendly and highly effective way to manage shared expenses among groups.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xobm58z2",
+      "id": "6",
+      "name": "Shape 4",
+      "bbox": [
+        83.34,
+        310.16,
+        46.87,
+        46.87
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/83itgfml",
+      "id": "7",
+      "name": "Text 5",
+      "bbox": [
+        151.04,
+        317.33,
+        320.76,
+        32.56
+      ],
+      "geometry": "rect",
+      "text": "Key Functionality Delivered",
+      "textPreview": "Key Functionality Delivered",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Key Functionality Delivered"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Key Functionality Delivered",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Key Functionality Delivered",
+              "fontSize": 26,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fepkzupw",
+      "id": "8",
+      "name": "Text 6",
+      "bbox": [
+        151.04,
+        362.39,
+        1301.62,
+        33.34
+      ],
+      "geometry": "rect",
+      "text": "Accurate tracking, real-time updates, and streamlined settlements are fully operational, ensuring financial clarity for users.",
+      "textPreview": "Accurate tracking, real-time updates, and streamlined settlements are fully operational, ensuring financial clarity for users.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Accurate tracking, real-time updates, and streamlined settlements are fully operational, ensuring financial clarity for users."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Accurate tracking, real-time updates, and streamlined settlements are fully operational, ensuring financial clarity for users.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Accurate tracking, real-time updates, and streamlined settlements are fully operational, ensuring financial clarity for users.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mtwra5gb",
+      "id": "9",
+      "name": "Shape 7",
+      "bbox": [
+        83.34,
+        437.39,
+        46.87,
+        46.87
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oj2t83it",
+      "id": "10",
+      "name": "Text 8",
+      "bbox": [
+        151.04,
+        444.55,
+        312.55,
+        32.56
+      ],
+      "geometry": "rect",
+      "text": "Successful Implementation",
+      "textPreview": "Successful Implementation",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Successful Implementation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Successful Implementation",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Successful Implementation",
+              "fontSize": 26,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d4vmtwra",
+      "id": "11",
+      "name": "Text 9",
+      "bbox": [
+        151.04,
+        489.61,
+        1301.62,
+        33.34
+      ],
+      "geometry": "rect",
+      "text": "Core features like flexible expense splitting and intelligent debt simplification have been successfully developed and tested.",
+      "textPreview": "Core features like flexible expense splitting and intelligent debt simplification have been successfully developed and tested.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Core features like flexible expense splitting and intelligent debt simplification have been successfully developed and tested."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Core features like flexible expense splitting and intelligent debt simplification have been successfully developed and tested.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Core features like flexible expense splitting and intelligent debt simplification have been successfully developed and tested.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6dcbulwv",
+      "id": "12",
+      "name": "Shape 10",
+      "bbox": [
+        83.34,
+        564.61,
+        46.87,
+        46.87
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vy90je9c",
+      "id": "13",
+      "name": "Text 11",
+      "bbox": [
+        151.04,
+        571.78,
+        267.11,
+        32.56
+      ],
+      "geometry": "rect",
+      "text": "Future-Ready Platform",
+      "textPreview": "Future-Ready Platform",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Future-Ready Platform"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Future-Ready Platform",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Future-Ready Platform",
+              "fontSize": 26,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o7qpg3ex",
+      "id": "14",
+      "name": "Text 12",
+      "bbox": [
+        151.04,
+        616.84,
+        1301.62,
+        33.34
+      ],
+      "geometry": "rect",
+      "text": "Planned AI integrations and automation will further enhance user experience, making expense management even more seamless.",
+      "textPreview": "Planned AI integrations and automation will further enhance user experience, making expense management even more seamless.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Planned AI integrations and automation will further enhance user experience, making expense management even more seamless."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Planned AI integrations and automation will further enhance user experience, making expense management even more seamless.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Planned AI integrations and automation will further enhance user experience, making expense management even more seamless.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dsji5sne",
+      "id": "15",
+      "name": "Shape 13",
+      "bbox": [
+        83.34,
+        691.84,
+        46.87,
+        46.87
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/61032lsz",
+      "id": "16",
+      "name": "Text 14",
+      "bbox": [
+        151.04,
+        699,
+        383.51,
+        32.56
+      ],
+      "geometry": "rect",
+      "text": "Demonstrated Technical Prowess",
+      "textPreview": "Demonstrated Technical Prowess",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Demonstrated Technical Prowess"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Demonstrated Technical Prowess",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Demonstrated Technical Prowess",
+              "fontSize": 26,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vmtwra5g",
+      "id": "17",
+      "name": "Text 15",
+      "bbox": [
+        151.04,
+        744.06,
+        1301.62,
+        33.34
+      ],
+      "geometry": "rect",
+      "text": "This project stands as a testament to the practical application of full-stack development and modern technology stacks.",
+      "textPreview": "This project stands as a testament to the practical application of full-stack development and modern technology stacks.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "This project stands as a testament to the practical application of full-stack development and modern technology stacks."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "This project stands as a testament to the practical application of full-stack development and modern technology stacks.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "This project stands as a testament to the practical application of full-stack development and modern technology stacks.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ovahoza1",
+      "id": "18",
+      "name": "Rectangle 17",
+      "bbox": [
+        1350.67,
+        812,
+        185.33,
+        52
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#FEFEFD"
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,0 +1,1571 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/mlkjm1cf",
+    "id": "mlkjm1cf",
+    "slide": 6,
+    "layoutId": "/ppt/slideLayouts/slideLayout6.xml",
+    "layoutName": "Slide 5 master",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1536,
+      "height": 864
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "typefaces": [
+      "+mn-lt",
+      "Gelasio",
+      "Lato"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout6.xml",
+      "name": "Slide 5 master",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout6.xml/4",
+          "id": "4",
+          "name": "Image 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout6.xml/3",
+          "id": "3",
+          "name": "Shape 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "geometry": "rect",
+          "fillColor": "rgba(255, 255, 255, 0.95)"
+        },
+        {
+          "order": 3,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout6.xml/5",
+          "id": "5",
+          "name": "Image 1",
+          "bbox": [
+            1347.95,
+            813.6,
+            180.85,
+            43.2
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          }
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ovahoza1",
+      "id": "2",
+      "name": "Text 0",
+      "bbox": [
+        123.62,
+        86.39,
+        408.56,
+        51.07
+      ],
+      "geometry": "rect",
+      "text": "Project Objectives",
+      "textPreview": "Project Objectives",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Project Objectives"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Project Objectives",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Project Objectives",
+              "fontSize": 40.67,
+              "typeface": "Gelasio",
+              "color": "#312F2B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dg7adsji",
+      "id": "3",
+      "name": "Text 1",
+      "bbox": [
+        123.62,
+        163.09,
+        1288.75,
+        23.31
+      ],
+      "geometry": "rect",
+      "text": "The SplitSync project aims to deliver a complete expense management solution through these specific objectives:",
+      "textPreview": "The SplitSync project aims to deliver a complete expense management solution through these specific objectives:",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The SplitSync project aims to deliver a complete expense management solution through these specific objectives:"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The SplitSync project aims to deliver a complete expense management solution through these specific objectives:",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The SplitSync project aims to deliver a complete expense management solution through these specific objectives:",
+              "fontSize": 16,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6hcrmhk3",
+      "id": "4",
+      "name": "Shape 2",
+      "bbox": [
+        123.62,
+        200.81,
+        421.04,
+        199.26
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z25kb6xk",
+      "id": "5",
+      "name": "Shape 3",
+      "bbox": [
+        140.76,
+        217.95,
+        49.02,
+        49.02
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E5E5E0"
+    },
+    {
+      "order": 5,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/n29gr2p8",
+      "id": "40",
+      "name": "Image 0",
+      "bbox": [
+        154.24,
+        231.42,
+        22.06,
+        22.06
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image6.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 2819
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image6.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 2819
+      }
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d8v6psfi",
+      "id": "7",
+      "name": "Text 4",
+      "bbox": [
+        140.76,
+        279.79,
+        204.27,
+        25.53
+      ],
+      "geometry": "rect",
+      "text": "Web-Based System",
+      "textPreview": "Web-Based System",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Web-Based System"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Web-Based System",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Web-Based System",
+              "fontSize": 20,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6dcbulwv",
+      "id": "8",
+      "name": "Text 5",
+      "bbox": [
+        140.76,
+        313,
+        386.76,
+        69.94
+      ],
+      "geometry": "rect",
+      "text": "Develop a responsive, web-based expense management platform accessible from any device with internet connectivity",
+      "textPreview": "Develop a responsive, web-based expense management platform accessible from any device with internet connectivity",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Develop a responsive, web-based expense"
+          },
+          {
+            "index": 2,
+            "text": "management platform accessible from any device"
+          },
+          {
+            "index": 3,
+            "text": "with internet connectivity"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Develop a responsive, web-based expense management platform accessible from any device with internet connectivity",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Develop a responsive, web-based expense management platform accessible from any device with internet connectivity",
+              "fontSize": 16,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vy90je9c",
+      "id": "9",
+      "name": "Shape 6",
+      "bbox": [
+        557.47,
+        200.81,
+        421.04,
+        199.26
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nuxc3ylc",
+      "id": "10",
+      "name": "Shape 7",
+      "bbox": [
+        574.61,
+        217.95,
+        49.02,
+        49.02
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E5E5E0"
+    },
+    {
+      "order": 10,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/yhgn29gr",
+      "id": "41",
+      "name": "Image 1",
+      "bbox": [
+        588.09,
+        231.42,
+        22.06,
+        22.06
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image8.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 1916
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image8.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 1916
+      }
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5wjudg7a",
+      "id": "12",
+      "name": "Text 8",
+      "bbox": [
+        574.61,
+        279.79,
+        204.27,
+        25.53
+      ],
+      "geometry": "rect",
+      "text": "Flexible Splitting",
+      "textPreview": "Flexible Splitting",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Flexible Splitting"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Flexible Splitting",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Flexible Splitting",
+              "fontSize": 20,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gbq1oryt",
+      "id": "13",
+      "name": "Text 9",
+      "bbox": [
+        574.61,
+        313,
+        386.76,
+        69.94
+      ],
+      "geometry": "rect",
+      "text": "Implement multiple expense splitting methods including equal division, percentage-based allocation, and custom user-defined splits",
+      "textPreview": "Implement multiple expense splitting methods including equal division, percentage-based allocation, and custom user-defined splits",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Implement multiple expense splitting methods"
+          },
+          {
+            "index": 2,
+            "text": "including equal division, percentage-based allocation,"
+          },
+          {
+            "index": 3,
+            "text": "and custom user-defined splits"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Implement multiple expense splitting methods including equal division, percentage-based allocation, and custom user-defined splits",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Implement multiple expense splitting methods including equal division, percentage-based allocation, and custom user-defined splits",
+              "fontSize": 16,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/n29gr2p8",
+      "id": "14",
+      "name": "Shape 10",
+      "bbox": [
+        991.33,
+        200.81,
+        421.04,
+        199.26
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yhgn29gr",
+      "id": "15",
+      "name": "Shape 11",
+      "bbox": [
+        1008.46,
+        217.95,
+        49.02,
+        49.02
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E5E5E0"
+    },
+    {
+      "order": 15,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/58z25kb6",
+      "id": "42",
+      "name": "Image 2",
+      "bbox": [
+        1021.94,
+        231.42,
+        22.06,
+        22.06
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image10.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 6537
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image10.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 6537
+      }
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gn29gr2p",
+      "id": "17",
+      "name": "Text 12",
+      "bbox": [
+        1008.46,
+        279.79,
+        204.27,
+        25.53
+      ],
+      "geometry": "rect",
+      "text": "Debt Simplification",
+      "textPreview": "Debt Simplification",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Debt Simplification"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Debt Simplification",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Debt Simplification",
+              "fontSize": 20,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/neloj2t8",
+      "id": "18",
+      "name": "Text 13",
+      "bbox": [
+        1008.46,
+        313,
+        386.76,
+        69.94
+      ],
+      "geometry": "rect",
+      "text": "Design an intelligent debt simplification mechanism that minimizes transaction count while maintaining accuracy",
+      "textPreview": "Design an intelligent debt simplification mechanism that minimizes transaction count while maintaining accuracy",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Design an intelligent debt simplification mechanism"
+          },
+          {
+            "index": 2,
+            "text": "that minimizes transaction count while maintaining"
+          },
+          {
+            "index": 3,
+            "text": "accuracy"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Design an intelligent debt simplification mechanism that minimizes transaction count while maintaining accuracy",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Design an intelligent debt simplification mechanism that minimizes transaction count while maintaining accuracy",
+              "fontSize": 16,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ytsvu9kn",
+      "id": "19",
+      "name": "Shape 14",
+      "bbox": [
+        123.62,
+        412.89,
+        421.04,
+        199.26
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2x4nap4r",
+      "id": "20",
+      "name": "Shape 15",
+      "bbox": [
+        140.76,
+        430.02,
+        49.02,
+        49.02
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E5E5E0"
+    },
+    {
+      "order": 20,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/gn29gr2p",
+      "id": "43",
+      "name": "Image 3",
+      "bbox": [
+        154.24,
+        443.5,
+        22.06,
+        22.06
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image12.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 2572
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image12.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 2572
+      }
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k3q5o7qp",
+      "id": "22",
+      "name": "Text 16",
+      "bbox": [
+        140.76,
+        491.86,
+        204.27,
+        25.53
+      ],
+      "geometry": "rect",
+      "text": "Real-Time Sync",
+      "textPreview": "Real-Time Sync",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Real-Time Sync"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Real-Time Sync",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Real-Time Sync",
+              "fontSize": 20,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/donyd0z6",
+      "id": "23",
+      "name": "Text 17",
+      "bbox": [
+        140.76,
+        525.07,
+        386.76,
+        46.62
+      ],
+      "geometry": "rect",
+      "text": "Enable instant data synchronization across all users without requiring manual refresh or page reload",
+      "textPreview": "Enable instant data synchronization across all users without requiring manual refresh or page reload",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Enable instant data synchronization across all users"
+          },
+          {
+            "index": 2,
+            "text": "without requiring manual refresh or page reload"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Enable instant data synchronization across all users without requiring manual refresh or page reload",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Enable instant data synchronization across all users without requiring manual refresh or page reload",
+              "fontSize": 16,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6psfil0r",
+      "id": "24",
+      "name": "Shape 18",
+      "bbox": [
+        557.47,
+        412.89,
+        421.04,
+        199.26
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/val87ed8",
+      "id": "25",
+      "name": "Shape 19",
+      "bbox": [
+        574.61,
+        430.02,
+        49.02,
+        49.02
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E5E5E0"
+    },
+    {
+      "order": 25,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/nuxc3ylc",
+      "id": "44",
+      "name": "Image 4",
+      "bbox": [
+        588.09,
+        443.5,
+        22.06,
+        22.06
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image14.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 4299
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image14.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 4299
+      }
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dcbulwva",
+      "id": "27",
+      "name": "Text 20",
+      "bbox": [
+        574.61,
+        491.86,
+        204.27,
+        25.53
+      ],
+      "geometry": "rect",
+      "text": "Analytics Dashboard",
+      "textPreview": "Analytics Dashboard",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Analytics Dashboard"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Analytics Dashboard",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Analytics Dashboard",
+              "fontSize": 20,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2lszqtcj",
+      "id": "28",
+      "name": "Text 21",
+      "bbox": [
+        574.61,
+        525.07,
+        386.76,
+        69.94
+      ],
+      "geometry": "rect",
+      "text": "Provide a user-friendly dashboard with visual analytics, spending patterns, and comprehensive financial summaries",
+      "textPreview": "Provide a user-friendly dashboard with visual analytics, spending patterns, and comprehensive financial summaries",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Provide a user-friendly dashboard with visual"
+          },
+          {
+            "index": 2,
+            "text": "analytics, spending patterns, and comprehensive"
+          },
+          {
+            "index": 3,
+            "text": "financial summaries"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Provide a user-friendly dashboard with visual analytics, spending patterns, and comprehensive financial summaries",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Provide a user-friendly dashboard with visual analytics, spending patterns, and comprehensive financial summaries",
+              "fontSize": 16,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v6psfil0",
+      "id": "29",
+      "name": "Shape 22",
+      "bbox": [
+        991.33,
+        412.89,
+        421.04,
+        199.26
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h4byhgn2",
+      "id": "30",
+      "name": "Shape 23",
+      "bbox": [
+        1008.46,
+        430.02,
+        49.02,
+        49.02
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E5E5E0"
+    },
+    {
+      "order": 30,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/y90je9cv",
+      "id": "45",
+      "name": "Image 5",
+      "bbox": [
+        1021.94,
+        443.5,
+        22.06,
+        22.06
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image16.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 6386
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image16.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 6386
+      }
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ylc7u54",
+      "id": "32",
+      "name": "Text 24",
+      "bbox": [
+        1008.46,
+        491.86,
+        204.27,
+        25.53
+      ],
+      "geometry": "rect",
+      "text": "AI Features",
+      "textPreview": "AI Features",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "AI Features"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "AI Features",
+          "runs": [
+            {
+              "index": 1,
+              "text": "AI Features",
+              "fontSize": 20,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/adsji5sn",
+      "id": "33",
+      "name": "Text 25",
+      "bbox": [
+        1008.46,
+        525.07,
+        386.76,
+        46.62
+      ],
+      "geometry": "rect",
+      "text": "Integrate AI-based features for automatic expense categorization and intelligent financial insights",
+      "textPreview": "Integrate AI-based features for automatic expense categorization and intelligent financial insights",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Integrate AI-based features for automatic expense"
+          },
+          {
+            "index": 2,
+            "text": "categorization and intelligent financial insights"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Integrate AI-based features for automatic expense categorization and intelligent financial insights",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Integrate AI-based features for automatic expense categorization and intelligent financial insights",
+              "fontSize": 16,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lszqtcj6",
+      "id": "34",
+      "name": "Shape 26",
+      "bbox": [
+        123.62,
+        624.96,
+        1288.74,
+        152.64
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s72x4nap",
+      "id": "35",
+      "name": "Shape 27",
+      "bbox": [
+        140.76,
+        642.1,
+        49.02,
+        49.02
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E5E5E0"
+    },
+    {
+      "order": 35,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/5wjudg7a",
+      "id": "46",
+      "name": "Image 6",
+      "bbox": [
+        154.24,
+        655.58,
+        22.06,
+        22.06
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image18.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 2076
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image18.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 2076
+      }
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a5gbq1or",
+      "id": "37",
+      "name": "Text 28",
+      "bbox": [
+        140.76,
+        703.94,
+        204.3,
+        25.53
+      ],
+      "geometry": "rect",
+      "text": "Automated Reminders",
+      "textPreview": "Automated Reminders",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Automated Reminders"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Automated Reminders",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Automated Reminders",
+              "fontSize": 20,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hoza1gvy",
+      "id": "38",
+      "name": "Text 29",
+      "bbox": [
+        140.76,
+        737.15,
+        1254.46,
+        23.31
+      ],
+      "geometry": "rect",
+      "text": "Automate payment reminders and notifications to ensure timely settlements and reduce friction",
+      "textPreview": "Automate payment reminders and notifications to ensure timely settlements and reduce friction",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Automate payment reminders and notifications to ensure timely settlements and reduce friction"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Automate payment reminders and notifications to ensure timely settlements and reduce friction",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Automate payment reminders and notifications to ensure timely settlements and reduce friction",
+              "fontSize": 16,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 38,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s36hcrmh",
+      "id": "39",
+      "name": "Rectangle 38",
+      "bbox": [
+        1350.67,
+        812,
+        185.33,
+        52
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#FEFEFD"
+    }
+  ],
+  "composeRuns": []
+}

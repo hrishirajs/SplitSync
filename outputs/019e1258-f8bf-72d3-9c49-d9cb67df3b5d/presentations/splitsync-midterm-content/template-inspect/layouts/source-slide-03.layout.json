@@ -1,0 +1,545 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/s72x4nap",
+    "id": "s72x4nap",
+    "slide": 4,
+    "layoutId": "/ppt/slideLayouts/slideLayout4.xml",
+    "layoutName": "Slide 3 master",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1536,
+      "height": 864
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "typefaces": [
+      "+mn-lt",
+      "Gelasio",
+      "Lato"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout4.xml",
+      "name": "Slide 3 master",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout4.xml/4",
+          "id": "4",
+          "name": "Image 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout4.xml/3",
+          "id": "3",
+          "name": "Shape 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "geometry": "rect",
+          "fillColor": "rgba(255, 255, 255, 0.95)"
+        },
+        {
+          "order": 3,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout4.xml/5",
+          "id": "5",
+          "name": "Image 1",
+          "bbox": [
+            1347.95,
+            813.6,
+            180.85,
+            43.2
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          }
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o7qpg3ex",
+      "id": "2",
+      "name": "Text 0",
+      "bbox": [
+        83.34,
+        174.7,
+        520.93,
+        65.1
+      ],
+      "geometry": "rect",
+      "text": "Introduction",
+      "textPreview": "Introduction",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Introduction"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Introduction",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Introduction",
+              "fontSize": 52,
+              "typeface": "Gelasio",
+              "color": "#312F2B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dsji5sne",
+      "id": "3",
+      "name": "Text 1",
+      "bbox": [
+        83.34,
+        291.87,
+        312.55,
+        39.06
+      ],
+      "geometry": "rect",
+      "text": "Why SplitSync?",
+      "textPreview": "Why SplitSync?",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Why SplitSync?"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Why SplitSync?",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Why SplitSync?",
+              "fontSize": 30.67,
+              "typeface": "Gelasio",
+              "color": "#312F2B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6dcbulwv",
+      "id": "4",
+      "name": "Text 2",
+      "bbox": [
+        83.34,
+        351.76,
+        659.25,
+        166.69
+      ],
+      "geometry": "rect",
+      "text": "Managing shared expenses is a universal challenge that affects millions of people daily. Whether it's friends on a trip, roommates splitting rent and utilities, colleagues sharing team lunches, or families managing household costs, the complexity of tracking who owes what grows exponentially with each transaction.",
+      "textPreview": "Managing shared expenses is a universal challenge that affects millions of people daily. Whether it's friends on a trip, roommates splitt...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Managing shared expenses is a universal challenge that affects millions"
+          },
+          {
+            "index": 2,
+            "text": "of people daily. Whether it's friends on a trip, roommates splitting rent"
+          },
+          {
+            "index": 3,
+            "text": "and utilities, colleagues sharing team lunches, or families managing"
+          },
+          {
+            "index": 4,
+            "text": "household costs, the complexity of tracking who owes what grows"
+          },
+          {
+            "index": 5,
+            "text": "exponentially with each transaction."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Managing shared expenses is a universal challenge that affects millions of people daily. Whether it's friends on a trip, roommates splitting rent and utilities, colleagues sharing team lunches, or families managing household costs, the complexity of tracking who owes what grows exponentially with each transaction.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Managing shared expenses is a universal challenge that affects millions of people daily. Whether it's friends on a trip, roommates splitting rent and utilities, colleagues sharing team lunches, or families managing household costs, the complexity of tracking who owes what grows exponentially with each transaction.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vy90je9c",
+      "id": "5",
+      "name": "Text 3",
+      "bbox": [
+        83.34,
+        537.2,
+        659.25,
+        133.35
+      ],
+      "geometry": "rect",
+      "text": "Traditional methods like manual spreadsheets, note-taking apps, or even pen and paper lead to confusion, forgotten debts, and sometimes strained relationships. The lack of real-time updates and automated calculations creates inefficiencies that frustrate users.",
+      "textPreview": "Traditional methods like manual spreadsheets, note-taking apps, or even pen and paper lead to confusion, forgotten debts, and sometimes s...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Traditional methods like manual spreadsheets, note-taking apps, or"
+          },
+          {
+            "index": 2,
+            "text": "even pen and paper lead to confusion, forgotten debts, and sometimes"
+          },
+          {
+            "index": 3,
+            "text": "strained relationships. The lack of real-time updates and automated"
+          },
+          {
+            "index": 4,
+            "text": "calculations creates inefficiencies that frustrate users."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Traditional methods like manual spreadsheets, note-taking apps, or even pen and paper lead to confusion, forgotten debts, and sometimes strained relationships. The lack of real-time updates and automated calculations creates inefficiencies that frustrate users.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Traditional methods like manual spreadsheets, note-taking apps, or even pen and paper lead to confusion, forgotten debts, and sometimes strained relationships. The lack of real-time updates and automated calculations creates inefficiencies that frustrate users.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oj2t83it",
+      "id": "6",
+      "name": "Text 4",
+      "bbox": [
+        794.21,
+        291.87,
+        312.55,
+        39.06
+      ],
+      "geometry": "rect",
+      "text": "About the Project",
+      "textPreview": "About the Project",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "About the Project"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "About the Project",
+          "runs": [
+            {
+              "index": 1,
+              "text": "About the Project",
+              "fontSize": 30.67,
+              "typeface": "Gelasio",
+              "color": "#312F2B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d4vmtwra",
+      "id": "7",
+      "name": "Text 5",
+      "bbox": [
+        794.21,
+        351.76,
+        659.25,
+        166.69
+      ],
+      "geometry": "rect",
+      "text": "SplitSync addresses these pain points by providing a comprehensive, full-stack expense splitting application that automates the entire process. Built with modern technologies and designed with scalability in mind, SplitSync offers flexible expense splitting methods, real-time synchronization across all participants, and intelligent debt management.",
+      "textPreview": "SplitSync addresses these pain points by providing a comprehensive, full-stack expense splitting application that automates the entire pr...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SplitSync addresses these pain points by providing a comprehensive,"
+          },
+          {
+            "index": 2,
+            "text": "full-stack expense splitting application that automates the entire"
+          },
+          {
+            "index": 3,
+            "text": "process. Built with modern technologies and designed with scalability"
+          },
+          {
+            "index": 4,
+            "text": "in mind, SplitSync offers flexible expense splitting methods, real-time"
+          },
+          {
+            "index": 5,
+            "text": "synchronization across all participants, and intelligent debt"
+          },
+          {
+            "index": 6,
+            "text": "management."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SplitSync addresses these pain points by providing a comprehensive, full-stack expense splitting application that automates the entire process. Built with modern technologies and designed with scalability in mind, SplitSync offers flexible expense splitting methods, real-time synchronization across all participants, and intelligent debt management.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "SplitSync addresses these pain points by providing a comprehensive, full-stack expense splitting application that automates the entire process. Built with modern technologies and designed with scalability in mind, SplitSync offers flexible expense splitting methods, real-time synchronization across all participants, and intelligent debt management.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6hcrmhk3",
+      "id": "8",
+      "name": "Text 6",
+      "bbox": [
+        794.21,
+        537.2,
+        659.25,
+        133.35
+      ],
+      "geometry": "rect",
+      "text": "The application combines an intuitive user interface with powerful backend logic to deliver a seamless experience. Users can track expenses, split costs in multiple ways, view real-time balances, and settle debts with just a few clicks.",
+      "textPreview": "The application combines an intuitive user interface with powerful backend logic to deliver a seamless experience. Users can track expens...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The application combines an intuitive user interface with powerful"
+          },
+          {
+            "index": 2,
+            "text": "backend logic to deliver a seamless experience. Users can track"
+          },
+          {
+            "index": 3,
+            "text": "expenses, split costs in multiple ways, view real-time balances, and"
+          },
+          {
+            "index": 4,
+            "text": "settle debts with just a few clicks."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The application combines an intuitive user interface with powerful backend logic to deliver a seamless experience. Users can track expenses, split costs in multiple ways, view real-time balances, and settle debts with just a few clicks.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The application combines an intuitive user interface with powerful backend logic to deliver a seamless experience. Users can track expenses, split costs in multiple ways, view real-time balances, and settle debts with just a few clicks.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z25kb6xk",
+      "id": "9",
+      "name": "Rectangle 8",
+      "bbox": [
+        1350.67,
+        812,
+        185.33,
+        52
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#FEFEFD"
+    }
+  ],
+  "composeRuns": []
+}

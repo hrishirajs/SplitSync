@@ -1,0 +1,273 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/4fu18jqh",
+    "id": "4fu18jqh",
+    "slide": 13,
+    "layoutId": "/ppt/slideLayouts/slideLayout13.xml",
+    "layoutName": "Slide 12 master",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1536,
+      "height": 864
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "typefaces": [
+      "+mn-lt",
+      "Gelasio",
+      "Lato"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout13.xml",
+      "name": "Slide 12 master",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout13.xml/4",
+          "id": "4",
+          "name": "Image 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout13.xml/3",
+          "id": "3",
+          "name": "Shape 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "geometry": "rect",
+          "fillColor": "rgba(255, 255, 255, 0.95)"
+        },
+        {
+          "order": 3,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout13.xml/5",
+          "id": "5",
+          "name": "Image 1",
+          "bbox": [
+            1347.95,
+            813.6,
+            180.85,
+            43.2
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          }
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/9w3m94fu",
+      "id": "6",
+      "name": "Image 0",
+      "bbox": [
+        768,
+        0,
+        768,
+        864
+      ],
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "/ppt/media/image69.png",
+        "contentType": "image/png",
+        "byteLength": 234354
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image69.png",
+        "contentType": "image/png",
+        "byteLength": 234354
+      }
+    },
+    {
+      "order": 2,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/kb6xkf6d",
+      "id": "7",
+      "name": "Image 1",
+      "bbox": [
+        794.04,
+        120.27,
+        715.91,
+        623.45
+      ],
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "/ppt/media/image70.png",
+        "contentType": "image/png",
+        "byteLength": 842040
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image70.png",
+        "contentType": "image/png",
+        "byteLength": 842040
+      }
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/adsji5sn",
+      "id": "4",
+      "name": "Text 0",
+      "bbox": [
+        83.34,
+        350.49,
+        520.93,
+        65.1
+      ],
+      "geometry": "rect",
+      "text": "Add Expense Page",
+      "textPreview": "Add Expense Page",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Add Expense Page"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Add Expense Page",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Add Expense Page",
+              "fontSize": 52,
+              "typeface": "Gelasio",
+              "color": "#312F2B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ylc7u54",
+      "id": "5",
+      "name": "Text 1",
+      "bbox": [
+        83.34,
+        446.84,
+        601.33,
+        66.67
+      ],
+      "geometry": "rect",
+      "text": "Allows users to add expenses with flexible splitting options such as equal, percentage-based, or custom amounts.",
+      "textPreview": "Allows users to add expenses with flexible splitting options such as equal, percentage-based, or custom amounts.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Allows users to add expenses with flexible splitting options such"
+          },
+          {
+            "index": 2,
+            "text": "as equal, percentage-based, or custom amounts."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Allows users to add expenses with flexible splitting options such as equal, percentage-based, or custom amounts.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Allows users to add expenses with flexible splitting options such as equal, percentage-based, or custom amounts.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

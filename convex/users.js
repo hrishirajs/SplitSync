@@ -18,15 +18,17 @@ export const store = mutation({
       .unique();
 
     if (user !== null) {
-      if (user.name !== identity.name) {
-        await ctx.db.patch(user._id, { name: identity.name });
+      const incomingName = identity.name ?? null;
+      // Only update name if: incoming name is non-null AND different from stored name
+      if (incomingName && user.name !== incomingName) {
+        await ctx.db.patch(user._id, { name: incomingName });
       }
       return user._id;
     }
 
     // New user — insert and send welcome email
     const userId = await ctx.db.insert("users", {
-      name: identity.name ?? "Anonymous",
+      name: identity.name || identity.email?.split("@")[0] || "User",
       tokenIdentifier: identity.tokenIdentifier,
       email: identity.email,
       imageUrl: identity.pictureUrl,
@@ -35,7 +37,7 @@ export const store = mutation({
     if (identity.email) {
       await ctx.scheduler.runAfter(0, internal.email.sendWelcomeEmail, {
         email: identity.email,
-        name: identity.name ?? "there",
+        name: identity.name || identity.email?.split("@")[0] || "there",
       });
     }
 

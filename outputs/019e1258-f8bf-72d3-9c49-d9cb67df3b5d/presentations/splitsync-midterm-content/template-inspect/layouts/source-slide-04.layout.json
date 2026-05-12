@@ -1,0 +1,1215 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/val87ed8",
+    "id": "val87ed8",
+    "slide": 5,
+    "layoutId": "/ppt/slideLayouts/slideLayout5.xml",
+    "layoutName": "Slide 4 master",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1536,
+      "height": 864
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "typefaces": [
+      "+mn-lt",
+      "Gelasio",
+      "Lato"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout5.xml",
+      "name": "Slide 4 master",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout5.xml/4",
+          "id": "4",
+          "name": "Image 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout5.xml/3",
+          "id": "3",
+          "name": "Shape 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "geometry": "rect",
+          "fillColor": "rgba(255, 255, 255, 0.95)"
+        },
+        {
+          "order": 3,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout5.xml/5",
+          "id": "5",
+          "name": "Image 1",
+          "bbox": [
+            1347.95,
+            813.6,
+            180.85,
+            43.2
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          }
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qtcj6tov",
+      "id": "2",
+      "name": "Text 0",
+      "bbox": [
+        74.95,
+        97.27,
+        468.44,
+        58.56
+      ],
+      "geometry": "rect",
+      "text": "Problem Statement",
+      "textPreview": "Problem Statement",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Problem Statement"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Problem Statement",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Problem Statement",
+              "fontSize": 46.67,
+              "typeface": "Gelasio",
+              "color": "#312F2B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/je9cvixc",
+      "id": "3",
+      "name": "Text 1",
+      "bbox": [
+        74.95,
+        189.54,
+        1386.1,
+        28.46
+      ],
+      "geometry": "rect",
+      "text": "Current expense management practices suffer from several critical shortcomings that create friction and inefficiency:",
+      "textPreview": "Current expense management practices suffer from several critical shortcomings that create friction and inefficiency:",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Current expense management practices suffer from several critical shortcomings that create friction and inefficiency:"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Current expense management practices suffer from several critical shortcomings that create friction and inefficiency:",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Current expense management practices suffer from several critical shortcomings that create friction and inefficiency:",
+              "fontSize": 18.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/87ed8bat",
+      "id": "4",
+      "name": "Shape 2",
+      "bbox": [
+        74.95,
+        236.95,
+        450.8,
+        223.96
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "rgba(255, 255, 255, 0.95)",
+      "lineColor": "#CECEC9",
+      "lineWidth": 2.4
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xs72x4na",
+      "id": "5",
+      "name": "Shape 3",
+      "bbox": [
+        72.55,
+        236.95,
+        9.6,
+        223.96
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E5E5E0"
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q1orytsv",
+      "id": "6",
+      "name": "Text 4",
+      "bbox": [
+        103.29,
+        258.09,
+        234.21,
+        29.27
+      ],
+      "geometry": "rect",
+      "text": "Tracking Complexity",
+      "textPreview": "Tracking Complexity",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Tracking Complexity"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Tracking Complexity",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Tracking Complexity",
+              "fontSize": 23.33,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fmlkjm1c",
+      "id": "7",
+      "name": "Text 5",
+      "bbox": [
+        103.29,
+        297.46,
+        401.33,
+        113.85
+      ],
+      "geometry": "rect",
+      "text": "Difficulty in maintaining accurate records of shared expenses among multiple users, especially when transactions happen frequently across different contexts and time periods.",
+      "textPreview": "Difficulty in maintaining accurate records of shared expenses among multiple users, especially when transactions happen frequently across...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Difficulty in maintaining accurate records of"
+          },
+          {
+            "index": 2,
+            "text": "shared expenses among multiple users,"
+          },
+          {
+            "index": 3,
+            "text": "especially when transactions happen frequently"
+          },
+          {
+            "index": 4,
+            "text": "across different contexts and time periods."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Difficulty in maintaining accurate records of shared expenses among multiple users, especially when transactions happen frequently across different contexts and time periods.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Difficulty in maintaining accurate records of shared expenses among multiple users, especially when transactions happen frequently across different contexts and time periods.",
+              "fontSize": 18.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8jqh0fep",
+      "id": "8",
+      "name": "Shape 6",
+      "bbox": [
+        542.6,
+        236.95,
+        450.8,
+        223.96
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "rgba(255, 255, 255, 0.95)",
+      "lineColor": "#CECEC9",
+      "lineWidth": 2.4
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x4nap4r6",
+      "id": "9",
+      "name": "Shape 7",
+      "bbox": [
+        540.2,
+        236.95,
+        9.6,
+        223.96
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E5E5E0"
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1w7mp0bi",
+      "id": "10",
+      "name": "Text 8",
+      "bbox": [
+        570.94,
+        258.09,
+        234.21,
+        29.27
+      ],
+      "geometry": "rect",
+      "text": "Lack of Transparency",
+      "textPreview": "Lack of Transparency",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Lack of Transparency"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Lack of Transparency",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Lack of Transparency",
+              "fontSize": 23.33,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8bat47y1",
+      "id": "11",
+      "name": "Text 9",
+      "bbox": [
+        570.94,
+        297.46,
+        401.33,
+        113.85
+      ],
+      "geometry": "rect",
+      "text": "Unclear visibility into who owes whom, leading to confusion, forgotten debts, and potential conflicts. Without a centralized system, each person maintains their own version of the truth.",
+      "textPreview": "Unclear visibility into who owes whom, leading to confusion, forgotten debts, and potential conflicts. Without a centralized system, each...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Unclear visibility into who owes whom, leading"
+          },
+          {
+            "index": 2,
+            "text": "to confusion, forgotten debts, and potential"
+          },
+          {
+            "index": 3,
+            "text": "conflicts. Without a centralized system, each"
+          },
+          {
+            "index": 4,
+            "text": "person maintains their own version of the truth."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Unclear visibility into who owes whom, leading to confusion, forgotten debts, and potential conflicts. Without a centralized system, each person maintains their own version of the truth.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Unclear visibility into who owes whom, leading to confusion, forgotten debts, and potential conflicts. Without a centralized system, each person maintains their own version of the truth.",
+              "fontSize": 18.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jqh0fepk",
+      "id": "12",
+      "name": "Shape 10",
+      "bbox": [
+        1010.25,
+        236.95,
+        450.8,
+        223.96
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "rgba(255, 255, 255, 0.95)",
+      "lineColor": "#CECEC9",
+      "lineWidth": 2.4
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q5o7qpg3",
+      "id": "13",
+      "name": "Shape 11",
+      "bbox": [
+        1007.85,
+        236.95,
+        9.6,
+        223.96
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E5E5E0"
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/18jqh0fe",
+      "id": "14",
+      "name": "Text 12",
+      "bbox": [
+        1038.59,
+        258.09,
+        285.09,
+        29.27
+      ],
+      "geometry": "rect",
+      "text": "Manual Calculation Burden",
+      "textPreview": "Manual Calculation Burden",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Manual Calculation Burden"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Manual Calculation Burden",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Manual Calculation Burden",
+              "fontSize": 23.33,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8nqxs72x",
+      "id": "15",
+      "name": "Text 13",
+      "bbox": [
+        1038.59,
+        297.46,
+        401.33,
+        142.31
+      ],
+      "geometry": "rect",
+      "text": "Time-consuming and error-prone manual calculations for splitting costs, especially when using complex percentages or custom distributions. Simple mistakes compound over time.",
+      "textPreview": "Time-consuming and error-prone manual calculations for splitting costs, especially when using complex percentages or custom distributions...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Time-consuming and error-prone manual"
+          },
+          {
+            "index": 2,
+            "text": "calculations for splitting costs, especially when"
+          },
+          {
+            "index": 3,
+            "text": "using complex percentages or custom"
+          },
+          {
+            "index": 4,
+            "text": "distributions. Simple mistakes compound over"
+          },
+          {
+            "index": 5,
+            "text": "time."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Time-consuming and error-prone manual calculations for splitting costs, especially when using complex percentages or custom distributions. Simple mistakes compound over time.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Time-consuming and error-prone manual calculations for splitting costs, especially when using complex percentages or custom distributions. Simple mistakes compound over time.",
+              "fontSize": 18.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/j2t83itg",
+      "id": "16",
+      "name": "Shape 14",
+      "bbox": [
+        74.95,
+        477.76,
+        450.8,
+        195.5
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "rgba(255, 255, 255, 0.95)",
+      "lineColor": "#CECEC9",
+      "lineWidth": 2.4
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qh0fepkz",
+      "id": "17",
+      "name": "Shape 15",
+      "bbox": [
+        72.55,
+        477.76,
+        9.6,
+        195.5
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E5E5E0"
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1cfa9w3m",
+      "id": "18",
+      "name": "Text 16",
+      "bbox": [
+        103.29,
+        498.9,
+        234.21,
+        29.27
+      ],
+      "geometry": "rect",
+      "text": "Payment Delays",
+      "textPreview": "Payment Delays",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Payment Delays"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Payment Delays",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Payment Delays",
+              "fontSize": 23.33,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/crmhk3q5",
+      "id": "19",
+      "name": "Text 17",
+      "bbox": [
+        103.29,
+        538.27,
+        401.33,
+        113.85
+      ],
+      "geometry": "rect",
+      "text": "Delayed settlements due to lack of reminders and notifications. Users forget about pending debts, leading to awkward conversations and strained relationships.",
+      "textPreview": "Delayed settlements due to lack of reminders and notifications. Users forget about pending debts, leading to awkward conversations and st...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Delayed settlements due to lack of reminders"
+          },
+          {
+            "index": 2,
+            "text": "and notifications. Users forget about pending"
+          },
+          {
+            "index": 3,
+            "text": "debts, leading to awkward conversations and"
+          },
+          {
+            "index": 4,
+            "text": "strained relationships."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Delayed settlements due to lack of reminders and notifications. Users forget about pending debts, leading to awkward conversations and strained relationships.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Delayed settlements due to lack of reminders and notifications. Users forget about pending debts, leading to awkward conversations and strained relationships.",
+              "fontSize": 18.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sfil0rqd",
+      "id": "20",
+      "name": "Shape 18",
+      "bbox": [
+        542.6,
+        477.76,
+        450.8,
+        195.5
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "rgba(255, 255, 255, 0.95)",
+      "lineColor": "#CECEC9",
+      "lineWidth": 2.4
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h0fepkzu",
+      "id": "21",
+      "name": "Shape 19",
+      "bbox": [
+        540.2,
+        477.76,
+        9.6,
+        195.5
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E5E5E0"
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a9w3m94f",
+      "id": "22",
+      "name": "Text 20",
+      "bbox": [
+        570.94,
+        498.9,
+        234.21,
+        29.27
+      ],
+      "geometry": "rect",
+      "text": "Limited Insights",
+      "textPreview": "Limited Insights",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Limited Insights"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Limited Insights",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Limited Insights",
+              "fontSize": 23.33,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zupwb2hw",
+      "id": "23",
+      "name": "Text 21",
+      "bbox": [
+        570.94,
+        538.27,
+        401.33,
+        113.85
+      ],
+      "geometry": "rect",
+      "text": "Absence of meaningful analytics and spending patterns. Users cannot easily identify trends, track their financial behavior, or make informed decisions about future expenses.",
+      "textPreview": "Absence of meaningful analytics and spending patterns. Users cannot easily identify trends, track their financial behavior, or make infor...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Absence of meaningful analytics and spending"
+          },
+          {
+            "index": 2,
+            "text": "patterns. Users cannot easily identify trends,"
+          },
+          {
+            "index": 3,
+            "text": "track their financial behavior, or make informed"
+          },
+          {
+            "index": 4,
+            "text": "decisions about future expenses."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Absence of meaningful analytics and spending patterns. Users cannot easily identify trends, track their financial behavior, or make informed decisions about future expenses.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Absence of meaningful analytics and spending patterns. Users cannot easily identify trends, track their financial behavior, or make informed decisions about future expenses.",
+              "fontSize": 18.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/orytsvu9",
+      "id": "24",
+      "name": "Shape 22",
+      "bbox": [
+        74.95,
+        692.21,
+        1386.1,
+        74.51
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#DCDCD5"
+    },
+    {
+      "order": 24,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/fyxobm58",
+      "id": "28",
+      "name": "Image 0",
+      "bbox": [
+        93.69,
+        720.02,
+        23.41,
+        18.74
+      ],
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "/ppt/media/image4.png",
+        "contentType": "image/png",
+        "byteLength": 473
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image4.png",
+        "contentType": "image/png",
+        "byteLength": 473
+      }
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/al87ed8b",
+      "id": "26",
+      "name": "Text 23",
+      "bbox": [
+        135.84,
+        713.74,
+        1306.47,
+        28.46
+      ],
+      "geometry": "rect",
+      "text": "Conclusion: A comprehensive system is needed to automate expense tracking, simplify debt calculations, and provide actionable financial insights in real-time.",
+      "textPreview": "Conclusion: A comprehensive system is needed to automate expense tracking, simplify debt calculations, and provide actionable financial i...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Conclusion: A comprehensive system is needed to automate expense tracking, simplify debt calculations, and provide actionable financial insights in real-time."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Conclusion: A comprehensive system is needed to automate expense tracking, simplify debt calculations, and provide actionable financial insights in real-time.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Conclusion:",
+              "fontSize": 18.67,
+              "typeface": "Lato",
+              "color": "#000000",
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": " A comprehensive system is needed to automate expense tracking, simplify debt calculations, and provide actionable financial insights in real-time.",
+              "fontSize": 18.67,
+              "typeface": "Lato",
+              "color": "#000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z61032ls",
+      "id": "27",
+      "name": "Rectangle 26",
+      "bbox": [
+        1350.67,
+        812,
+        185.33,
+        52
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#FEFEFD"
+    }
+  ],
+  "composeRuns": []
+}

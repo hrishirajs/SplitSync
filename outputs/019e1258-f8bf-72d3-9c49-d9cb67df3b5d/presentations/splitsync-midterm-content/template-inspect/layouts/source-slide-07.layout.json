@@ -1,0 +1,985 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/0z61032l",
+    "id": "0z61032l",
+    "slide": 8,
+    "layoutId": "/ppt/slideLayouts/slideLayout8.xml",
+    "layoutName": "Slide 7 master",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1536,
+      "height": 864
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "typefaces": [
+      "+mn-lt",
+      "Gelasio",
+      "Lato"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout8.xml",
+      "name": "Slide 7 master",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout8.xml/4",
+          "id": "4",
+          "name": "Image 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout8.xml/3",
+          "id": "3",
+          "name": "Shape 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "geometry": "rect",
+          "fillColor": "rgba(255, 255, 255, 0.95)"
+        },
+        {
+          "order": 3,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout8.xml/5",
+          "id": "5",
+          "name": "Image 1",
+          "bbox": [
+            1347.95,
+            813.6,
+            180.85,
+            43.2
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          }
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x4nap4r6",
+      "id": "2",
+      "name": "Text 0",
+      "bbox": [
+        83.34,
+        69.34,
+        520.93,
+        65.1
+      ],
+      "geometry": "rect",
+      "text": "Key Features",
+      "textPreview": "Key Features",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Key Features"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Key Features",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Key Features",
+              "fontSize": 52,
+              "typeface": "Gelasio",
+              "color": "#312F2B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/cj6tovah",
+      "id": "22",
+      "name": "Image 0",
+      "bbox": [
+        83.34,
+        176.1,
+        52.09,
+        52.09
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image34.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3197
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image34.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3197
+      }
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fa9w3m94",
+      "id": "4",
+      "name": "Text 1",
+      "bbox": [
+        161.46,
+        176.1,
+        299.25,
+        32.56
+      ],
+      "geometry": "rect",
+      "text": "Flexible Expense Splitting",
+      "textPreview": "Flexible Expense Splitting",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Flexible Expense Splitting"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Flexible Expense Splitting",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Flexible Expense Splitting",
+              "fontSize": 26,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qpg3ex0n",
+      "id": "5",
+      "name": "Text 2",
+      "bbox": [
+        161.46,
+        221.16,
+        593.51,
+        133.35
+      ],
+      "geometry": "rect",
+      "text": "Supports multiple splitting methods including equal division among all participants, percentage-based allocation for uneven contributions, and fully customizable splits where users define exact amounts for each person.",
+      "textPreview": "Supports multiple splitting methods including equal division among all participants, percentage-based allocation for uneven contributions...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Supports multiple splitting methods including equal division"
+          },
+          {
+            "index": 2,
+            "text": "among all participants, percentage-based allocation for uneven"
+          },
+          {
+            "index": 3,
+            "text": "contributions, and fully customizable splits where users define"
+          },
+          {
+            "index": 4,
+            "text": "exact amounts for each person."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Supports multiple splitting methods including equal division among all participants, percentage-based allocation for uneven contributions, and fully customizable splits where users define exact amounts for each person.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Supports multiple splitting methods including equal division among all participants, percentage-based allocation for uneven contributions, and fully customizable splits where users define exact amounts for each person.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/54zidony",
+      "id": "23",
+      "name": "Image 1",
+      "bbox": [
+        781.01,
+        176.1,
+        52.09,
+        52.09
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image36.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 4176
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image36.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 4176
+      }
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8v6psfil",
+      "id": "7",
+      "name": "Text 3",
+      "bbox": [
+        859.14,
+        176.1,
+        260.46,
+        32.56
+      ],
+      "geometry": "rect",
+      "text": "Debt Simplification",
+      "textPreview": "Debt Simplification",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Debt Simplification"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Debt Simplification",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Debt Simplification",
+              "fontSize": 26,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/je9cvixc",
+      "id": "8",
+      "name": "Text 4",
+      "bbox": [
+        859.14,
+        221.16,
+        593.53,
+        133.35
+      ],
+      "geometry": "rect",
+      "text": "Intelligently minimizes the number of transactions required for settlement. Instead of multiple small payments, the algorithm suggests optimal payment paths that reduce complexity while maintaining accuracy in balances.",
+      "textPreview": "Intelligently minimizes the number of transactions required for settlement. Instead of multiple small payments, the algorithm suggests op...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Intelligently minimizes the number of transactions required for"
+          },
+          {
+            "index": 2,
+            "text": "settlement. Instead of multiple small payments, the algorithm"
+          },
+          {
+            "index": 3,
+            "text": "suggests optimal payment paths that reduce complexity while"
+          },
+          {
+            "index": 4,
+            "text": "maintaining accuracy in balances."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Intelligently minimizes the number of transactions required for settlement. Instead of multiple small payments, the algorithm suggests optimal payment paths that reduce complexity while maintaining accuracy in balances.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Intelligently minimizes the number of transactions required for settlement. Instead of multiple small payments, the algorithm suggests optimal payment paths that reduce complexity while maintaining accuracy in balances.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/upwb2hwf",
+      "id": "24",
+      "name": "Image 2",
+      "bbox": [
+        83.34,
+        396.18,
+        52.09,
+        52.09
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image38.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3789
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image38.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3789
+      }
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/svu9knih",
+      "id": "10",
+      "name": "Text 5",
+      "bbox": [
+        161.46,
+        396.18,
+        260.46,
+        32.56
+      ],
+      "geometry": "rect",
+      "text": "Real-Time Updates",
+      "textPreview": "Real-Time Updates",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Real-Time Updates"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Real-Time Updates",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Real-Time Updates",
+              "fontSize": 26,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hgn29gr2",
+      "id": "11",
+      "name": "Text 6",
+      "bbox": [
+        161.46,
+        441.24,
+        593.51,
+        133.35
+      ],
+      "geometry": "rect",
+      "text": "Instant synchronization across all connected users ensures everyone sees the latest balances and expenses immediately. No manual refresh required, providing a seamless collaborative experience.",
+      "textPreview": "Instant synchronization across all connected users ensures everyone sees the latest balances and expenses immediately. No manual refresh ...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Instant synchronization across all connected users ensures"
+          },
+          {
+            "index": 2,
+            "text": "everyone sees the latest balances and expenses immediately."
+          },
+          {
+            "index": 3,
+            "text": "No manual refresh required, providing a seamless collaborative"
+          },
+          {
+            "index": 4,
+            "text": "experience."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Instant synchronization across all connected users ensures everyone sees the latest balances and expenses immediately. No manual refresh required, providing a seamless collaborative experience.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Instant synchronization across all connected users ensures everyone sees the latest balances and expenses immediately. No manual refresh required, providing a seamless collaborative experience.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/nap4r65w",
+      "id": "25",
+      "name": "Image 3",
+      "bbox": [
+        781.01,
+        396.18,
+        52.09,
+        52.09
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image40.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3893
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image40.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3893
+      }
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/za1gvy90",
+      "id": "13",
+      "name": "Text 7",
+      "bbox": [
+        859.14,
+        396.18,
+        351.35,
+        32.56
+      ],
+      "geometry": "rect",
+      "text": "Contact & Group Management",
+      "textPreview": "Contact & Group Management",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Contact & Group Management"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Contact & Group Management",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Contact & Group Management",
+              "fontSize": 26,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s36hcrmh",
+      "id": "14",
+      "name": "Text 8",
+      "bbox": [
+        859.14,
+        441.24,
+        593.53,
+        100.01
+      ],
+      "geometry": "rect",
+      "text": "Create and manage groups for different contexts like trips, roommates, or office teams. Track shared expenses within each group and maintain separate contact lists for organization.",
+      "textPreview": "Create and manage groups for different contexts like trips, roommates, or office teams. Track shared expenses within each group and maint...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Create and manage groups for different contexts like trips,"
+          },
+          {
+            "index": 2,
+            "text": "roommates, or office teams. Track shared expenses within each"
+          },
+          {
+            "index": 3,
+            "text": "group and maintain separate contact lists for organization."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Create and manage groups for different contexts like trips, roommates, or office teams. Track shared expenses within each group and maintain separate contact lists for organization.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Create and manage groups for different contexts like trips, roommates, or office teams. Track shared expenses within each group and maintain separate contact lists for organization.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/cvixczed",
+      "id": "26",
+      "name": "Image 4",
+      "bbox": [
+        83.34,
+        616.25,
+        52.09,
+        52.09
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image42.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 1657
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image42.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 1657
+      }
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a1gvy90j",
+      "id": "16",
+      "name": "Text 9",
+      "bbox": [
+        161.46,
+        616.25,
+        260.46,
+        32.56
+      ],
+      "geometry": "rect",
+      "text": "Interactive Dashboard",
+      "textPreview": "Interactive Dashboard",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Interactive Dashboard"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Interactive Dashboard",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Interactive Dashboard",
+              "fontSize": 26,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zidonyd0",
+      "id": "17",
+      "name": "Text 10",
+      "bbox": [
+        161.46,
+        661.31,
+        593.51,
+        133.35
+      ],
+      "geometry": "rect",
+      "text": "Visual displays of spending patterns, balance summaries, and financial insights through charts and graphs. Users can quickly understand their financial position and track spending trends over time.",
+      "textPreview": "Visual displays of spending patterns, balance summaries, and financial insights through charts and graphs. Users can quickly understand t...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Visual displays of spending patterns, balance summaries, and"
+          },
+          {
+            "index": 2,
+            "text": "financial insights through charts and graphs. Users can quickly"
+          },
+          {
+            "index": 3,
+            "text": "understand their financial position and track spending trends"
+          },
+          {
+            "index": 4,
+            "text": "over time."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Visual displays of spending patterns, balance summaries, and financial insights through charts and graphs. Users can quickly understand their financial position and track spending trends over time.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Visual displays of spending patterns, balance summaries, and financial insights through charts and graphs. Users can quickly understand their financial position and track spending trends over time.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/5gbq1ory",
+      "id": "27",
+      "name": "Image 5",
+      "bbox": [
+        781.01,
+        616.25,
+        52.09,
+        52.09
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image44.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3737
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image44.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3737
+      }
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lszqtcj6",
+      "id": "19",
+      "name": "Text 11",
+      "bbox": [
+        859.14,
+        616.25,
+        260.46,
+        32.56
+      ],
+      "geometry": "rect",
+      "text": "Settlement Recording",
+      "textPreview": "Settlement Recording",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Settlement Recording"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Settlement Recording",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Settlement Recording",
+              "fontSize": 26,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pg3ex0nu",
+      "id": "20",
+      "name": "Text 12",
+      "bbox": [
+        859.14,
+        662.65,
+        593.53,
+        133.35
+      ],
+      "geometry": "rect",
+      "text": "Users can record actual payments and settlements, maintaining complete transaction history. The system updates balances automatically and keeps track of all payment details for future reference.",
+      "textPreview": "Users can record actual payments and settlements, maintaining complete transaction history. The system updates balances automatically and...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Users can record actual payments and settlements, maintaining"
+          },
+          {
+            "index": 2,
+            "text": "complete transaction history. The system updates balances"
+          },
+          {
+            "index": 3,
+            "text": "automatically and keeps track of all payment details for future"
+          },
+          {
+            "index": 4,
+            "text": "reference."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Users can record actual payments and settlements, maintaining complete transaction history. The system updates balances automatically and keeps track of all payment details for future reference.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Users can record actual payments and settlements, maintaining complete transaction history. The system updates balances automatically and keeps track of all payment details for future reference.",
+              "fontSize": 20.67,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wval87ed",
+      "id": "21",
+      "name": "Rectangle 20",
+      "bbox": [
+        1350.67,
+        812,
+        185.33,
+        52
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#FEFEFD"
+    }
+  ],
+  "composeRuns": []
+}

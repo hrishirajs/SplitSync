@@ -1,0 +1,1545 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/58z25kb6",
+    "id": "58z25kb6",
+    "slide": 7,
+    "layoutId": "/ppt/slideLayouts/slideLayout7.xml",
+    "layoutName": "Slide 6 master",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1536,
+      "height": 864
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "typefaces": [
+      "+mn-lt",
+      "Gelasio",
+      "Lato"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout7.xml",
+      "name": "Slide 6 master",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout7.xml/4",
+          "id": "4",
+          "name": "Image 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 382408
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout7.xml/3",
+          "id": "3",
+          "name": "Shape 0",
+          "bbox": [
+            0,
+            0,
+            1536,
+            864
+          ],
+          "geometry": "rect",
+          "fillColor": "rgba(255, 255, 255, 0.95)"
+        },
+        {
+          "order": 3,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout7.xml/5",
+          "id": "5",
+          "name": "Image 1",
+          "bbox": [
+            1347.95,
+            813.6,
+            180.85,
+            43.2
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image2.png",
+            "contentType": "image/png",
+            "byteLength": 12803
+          }
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ylc7u54z",
+      "id": "2",
+      "name": "Text 0",
+      "bbox": [
+        212.74,
+        61.45,
+        352.06,
+        44.01
+      ],
+      "geometry": "rect",
+      "text": "Methodology",
+      "textPreview": "Methodology",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Methodology"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Methodology",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Methodology",
+              "fontSize": 34.67,
+              "typeface": "Gelasio",
+              "color": "#312F2B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/r65wjudg",
+      "id": "3",
+      "name": "Text 1",
+      "bbox": [
+        212.74,
+        124.49,
+        1110.51,
+        18.87
+      ],
+      "geometry": "rect",
+      "text": "The development of SplitSync follows a structured approach combining modern web technologies with best practices in software engineering:",
+      "textPreview": "The development of SplitSync follows a structured approach combining modern web technologies with best practices in software engineering:",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The development of SplitSync follows a structured approach combining modern web technologies with best practices in software engineering:"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The development of SplitSync follows a structured approach combining modern web technologies with best practices in software engineering:",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The development of SplitSync follows a structured approach combining modern web technologies with best practices in software engineering:",
+              "fontSize": 14,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g3ex0nux",
+      "id": "4",
+      "name": "Shape 2",
+      "bbox": [
+        226.81,
+        175.18,
+        14.07,
+        63.36
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5o7qpg3e",
+      "id": "5",
+      "name": "Shape 3",
+      "bbox": [
+        212.74,
+        165.94,
+        42.24,
+        42.24
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 5,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/d8bat47y",
+      "id": "40",
+      "name": "Image 0",
+      "bbox": [
+        223.3,
+        176.5,
+        21.11,
+        21.11
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image20.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3674
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image20.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3674
+      }
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nih4byhg",
+      "id": "7",
+      "name": "Text 4",
+      "bbox": [
+        264.49,
+        168.14,
+        176.02,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Requirement Analysis",
+      "textPreview": "Requirement Analysis",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Requirement Analysis"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Requirement Analysis",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Requirement Analysis",
+              "fontSize": 17.33,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g7adsji5",
+      "id": "8",
+      "name": "Text 5",
+      "bbox": [
+        264.49,
+        195.84,
+        1058.76,
+        18.87
+      ],
+      "geometry": "rect",
+      "text": "Identify user needs, core features, and edge cases through stakeholder interviews and competitive analysis of existing solutions",
+      "textPreview": "Identify user needs, core features, and edge cases through stakeholder interviews and competitive analysis of existing solutions",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Identify user needs, core features, and edge cases through stakeholder interviews and competitive analysis of existing solutions"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Identify user needs, core features, and edge cases through stakeholder interviews and competitive analysis of existing solutions",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Identify user needs, core features, and edge cases through stakeholder interviews and competitive analysis of existing solutions",
+              "fontSize": 14,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9s36hcrm",
+      "id": "9",
+      "name": "Shape 6",
+      "bbox": [
+        247.93,
+        269.18,
+        14.07,
+        63.36
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d8v6psfi",
+      "id": "10",
+      "name": "Shape 7",
+      "bbox": [
+        233.85,
+        259.94,
+        42.24,
+        42.24
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 10,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/knih4byh",
+      "id": "41",
+      "name": "Image 1",
+      "bbox": [
+        244.41,
+        270.5,
+        21.11,
+        21.11
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image22.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3694
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image22.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3694
+      }
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z25kb6xk",
+      "id": "12",
+      "name": "Text 8",
+      "bbox": [
+        285.6,
+        262.14,
+        176.02,
+        22
+      ],
+      "geometry": "rect",
+      "text": "System Design",
+      "textPreview": "System Design",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "System Design"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "System Design",
+          "runs": [
+            {
+              "index": 1,
+              "text": "System Design",
+              "fontSize": 17.33,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6hcrmhk3",
+      "id": "13",
+      "name": "Text 9",
+      "bbox": [
+        285.6,
+        289.84,
+        1037.65,
+        18.87
+      ],
+      "geometry": "rect",
+      "text": "Design intuitive UI/UX wireframes and plan database schema to support efficient querying and data relationships",
+      "textPreview": "Design intuitive UI/UX wireframes and plan database schema to support efficient querying and data relationships",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Design intuitive UI/UX wireframes and plan database schema to support efficient querying and data relationships"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Design intuitive UI/UX wireframes and plan database schema to support efficient querying and data relationships",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Design intuitive UI/UX wireframes and plan database schema to support efficient querying and data relationships",
+              "fontSize": 14,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dg7adsji",
+      "id": "14",
+      "name": "Shape 10",
+      "bbox": [
+        269.05,
+        363.18,
+        14.07,
+        63.36
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ovahoza1",
+      "id": "15",
+      "name": "Shape 11",
+      "bbox": [
+        254.98,
+        353.94,
+        42.24,
+        42.24
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 15,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/v6psfil0",
+      "id": "42",
+      "name": "Image 2",
+      "bbox": [
+        265.54,
+        364.5,
+        21.11,
+        21.11
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image24.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 6781
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image24.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 6781
+      }
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6tovahoz",
+      "id": "17",
+      "name": "Text 12",
+      "bbox": [
+        306.73,
+        356.14,
+        180.99,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Frontend Development",
+      "textPreview": "Frontend Development",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Frontend Development"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Frontend Development",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Frontend Development",
+              "fontSize": 17.33,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dsji5sne",
+      "id": "18",
+      "name": "Text 13",
+      "bbox": [
+        306.73,
+        383.84,
+        1016.53,
+        18.87
+      ],
+      "geometry": "rect",
+      "text": "Build responsive user interface using Next.js framework with modern UI components and interactive elements",
+      "textPreview": "Build responsive user interface using Next.js framework with modern UI components and interactive elements",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Build responsive user interface using Next.js framework with modern UI components and interactive elements"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Build responsive user interface using Next.js framework with modern UI components and interactive elements",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Build responsive user interface using Next.js framework with modern UI components and interactive elements",
+              "fontSize": 14,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o7qpg3ex",
+      "id": "19",
+      "name": "Shape 14",
+      "bbox": [
+        290.18,
+        457.18,
+        14.07,
+        63.36
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kjm1cfa9",
+      "id": "20",
+      "name": "Shape 15",
+      "bbox": [
+        276.1,
+        447.94,
+        42.24,
+        42.24
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 20,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/2lszqtcj",
+      "id": "43",
+      "name": "Image 3",
+      "bbox": [
+        286.66,
+        458.5,
+        21.11,
+        21.11
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image26.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3651
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image26.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3651
+      }
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2hwfyxob",
+      "id": "22",
+      "name": "Text 16",
+      "bbox": [
+        327.85,
+        450.14,
+        176.02,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Backend Development",
+      "textPreview": "Backend Development",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Backend Development"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Backend Development",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Backend Development",
+              "fontSize": 17.33,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/r2p8nqxs",
+      "id": "23",
+      "name": "Text 17",
+      "bbox": [
+        327.85,
+        477.84,
+        995.4,
+        18.87
+      ],
+      "geometry": "rect",
+      "text": "Implement real-time database using Convex platform and secure authentication using Clerk integration",
+      "textPreview": "Implement real-time database using Convex platform and secure authentication using Clerk integration",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Implement real-time database using Convex platform and secure authentication using Clerk integration"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Implement real-time database using Convex platform and secure authentication using Clerk integration",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Implement real-time database using Convex platform and secure authentication using Clerk integration",
+              "fontSize": 14,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gvy90je9",
+      "id": "24",
+      "name": "Shape 18",
+      "bbox": [
+        269.05,
+        551.18,
+        14.07,
+        63.36
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9gr2p8nq",
+      "id": "25",
+      "name": "Shape 19",
+      "bbox": [
+        254.98,
+        541.94,
+        42.24,
+        42.24
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 25,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/d0z61032",
+      "id": "44",
+      "name": "Image 4",
+      "bbox": [
+        265.54,
+        552.5,
+        21.11,
+        21.11
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image28.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 5166
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image28.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 5166
+      }
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ra5gbq1o",
+      "id": "27",
+      "name": "Text 20",
+      "bbox": [
+        306.73,
+        544.14,
+        213.65,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Core Logic Implementation",
+      "textPreview": "Core Logic Implementation",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Core Logic Implementation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Core Logic Implementation",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Core Logic Implementation",
+              "fontSize": 17.33,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kzupwb2h",
+      "id": "28",
+      "name": "Text 21",
+      "bbox": [
+        306.73,
+        571.84,
+        1016.53,
+        18.87
+      ],
+      "geometry": "rect",
+      "text": "Develop expense splitting algorithms and debt simplification mechanism to handle complex scenarios efficiently",
+      "textPreview": "Develop expense splitting algorithms and debt simplification mechanism to handle complex scenarios efficiently",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Develop expense splitting algorithms and debt simplification mechanism to handle complex scenarios efficiently"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Develop expense splitting algorithms and debt simplification mechanism to handle complex scenarios efficiently",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Develop expense splitting algorithms and debt simplification mechanism to handle complex scenarios efficiently",
+              "fontSize": 14,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9knih4by",
+      "id": "29",
+      "name": "Shape 22",
+      "bbox": [
+        247.93,
+        645.18,
+        14.07,
+        63.36
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fa9w3m94",
+      "id": "30",
+      "name": "Shape 23",
+      "bbox": [
+        233.85,
+        635.94,
+        42.24,
+        42.24
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 30,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/kf6dcbul",
+      "id": "45",
+      "name": "Image 5",
+      "bbox": [
+        244.41,
+        646.5,
+        21.11,
+        21.11
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image30.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3369
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image30.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 3369
+      }
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xczed8v6",
+      "id": "32",
+      "name": "Text 24",
+      "bbox": [
+        285.6,
+        638.14,
+        176.02,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Testing",
+      "textPreview": "Testing",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Testing"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Testing",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Testing",
+              "fontSize": 17.33,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8v6psfil",
+      "id": "33",
+      "name": "Text 25",
+      "bbox": [
+        285.6,
+        665.84,
+        1037.65,
+        18.87
+      ],
+      "geometry": "rect",
+      "text": "Conduct comprehensive functional testing with edge case handling to ensure reliability and robustness",
+      "textPreview": "Conduct comprehensive functional testing with edge case handling to ensure reliability and robustness",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Conduct comprehensive functional testing with edge case handling to ensure reliability and robustness"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Conduct comprehensive functional testing with edge case handling to ensure reliability and robustness",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Conduct comprehensive functional testing with edge case handling to ensure reliability and robustness",
+              "fontSize": 14,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fyxobm58",
+      "id": "34",
+      "name": "Shape 26",
+      "bbox": [
+        226.81,
+        739.18,
+        14.07,
+        63.36
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qd4vmtwr",
+      "id": "35",
+      "name": "Shape 27",
+      "bbox": [
+        212.74,
+        729.94,
+        42.24,
+        42.24
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#E8E8E3",
+      "lineColor": "#CECEC9",
+      "lineWidth": 0.8
+    },
+    {
+      "order": 35,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/vu9knih4",
+      "id": "46",
+      "name": "Image 6",
+      "bbox": [
+        223.3,
+        740.5,
+        21.11,
+        21.11
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image32.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 1839
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image32.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 1839
+      }
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8jqh0fep",
+      "id": "37",
+      "name": "Text 28",
+      "bbox": [
+        264.49,
+        732.14,
+        176.02,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Deployment",
+      "textPreview": "Deployment",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Deployment"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Deployment",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Deployment",
+              "fontSize": 17.33,
+              "typeface": "Gelasio",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fmlkjm1c",
+      "id": "38",
+      "name": "Text 29",
+      "bbox": [
+        264.49,
+        759.84,
+        1058.76,
+        18.87
+      ],
+      "geometry": "rect",
+      "text": "Prepare for cloud-based hosting on scalable infrastructure for public access and production usage",
+      "textPreview": "Prepare for cloud-based hosting on scalable infrastructure for public access and production usage",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Prepare for cloud-based hosting on scalable infrastructure for public access and production usage"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Prepare for cloud-based hosting on scalable infrastructure for public access and production usage",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Prepare for cloud-based hosting on scalable infrastructure for public access and production usage",
+              "fontSize": 14,
+              "typeface": "Lato",
+              "color": "#272525"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 38,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q1orytsv",
+      "id": "39",
+      "name": "Rectangle 38",
+      "bbox": [
+        1350.67,
+        812,
+        185.33,
+        52
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#FEFEFD"
+    }
+  ],
+  "composeRuns": []
+}
