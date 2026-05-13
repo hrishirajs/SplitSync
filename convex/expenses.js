@@ -330,3 +330,58 @@ export const deleteExpense = mutation({
     return { success: true };
   },
 });
+
+export const getAllUserExpenses = query({
+  handler: async (ctx) => {
+    const me = await ctx.runQuery(internal.users.getCurrentUser);
+    if (!me) return { individual: [], group: [] };
+
+    const allExpenses = await ctx.db.query("expenses").collect();
+
+    const myExpenses = allExpenses.filter(
+      (e) =>
+        e.paidByUserId === me._id ||
+        e.splits.some((s) => s.userId === me._id)
+    );
+
+    const individual = myExpenses.filter((e) => !e.groupId);
+    const group = myExpenses.filter((e) => !!e.groupId);
+
+    // Enrich individual expenses with the other user's info
+    const enrichedIndividual = await Promise.all(
+      individual.map(async (e) => {
+        const otherUserId =
+          e.paidByUserId === me._id
+            ? e.splits.find((s) => s.userId !== me._id)?.userId
+            : e.paidByUserId;
+        const otherUser = otherUserId ? await ctx.db.get(otherUserId) : null;
+        return {
+          ...e,
+          otherUser: otherUser
+            ? {
+                id: otherUser._id,
+                name: otherUser.name,
+                imageUrl: otherUser.imageUrl,
+              }
+            : null,
+        };
+      })
+    );
+
+    // Enrich group expenses with group name
+    const enrichedGroup = await Promise.all(
+      group.map(async (e) => {
+        const grp = e.groupId ? await ctx.db.get(e.groupId) : null;
+        return {
+          ...e,
+          groupName: grp?.name ?? "Unknown group",
+        };
+      })
+    );
+
+    return {
+      individual: enrichedIndividual.sort((a, b) => b.date - a.date),
+      group: enrichedGroup.sort((a, b) => b.date - a.date),
+    };
+  },
+});
