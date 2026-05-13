@@ -11,8 +11,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { PlusCircle, Users, CreditCard, ChevronRight } from "lucide-react";
+import { PlusCircle, Users, CreditCard, ChevronRight, Receipt } from "lucide-react";
 import Link from "next/link";
+import { format } from "date-fns";
 import { ExpenseSummary } from "./components/expense-summary";
 import { BalanceSummary } from "./components/balance-summary";
 import { GroupList } from "./components/group-list";
@@ -41,7 +42,6 @@ export default function Dashboard() {
     totalSpentLoading ||
     monthlySpendingLoading;
 
-  // `getUserBalances` already nets across 1:1 + group expenses/settlements.
   const totalYouOwe = balances?.youOwe || 0;
   const totalYouAreOwed = balances?.youAreOwed || 0;
   const totalBalance = balances?.totalBalance || 0;
@@ -181,7 +181,6 @@ export default function Dashboard() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Left column */}
             <div className="lg:col-span-2 space-y-6">
-              {/* Expense summary */}
               <ExpenseSummary
                 monthlySpending={monthlySpending}
                 totalSpent={totalSpent}
@@ -191,6 +190,61 @@ export default function Dashboard() {
             {/* Right column */}
             <div className="space-y-6">
               <SmartSettleRecommendation balances={balances} />
+
+              {/* All Expenses quick link */}
+              <Card>
+                <CardHeader className="pb-3">
+                  <div className="flex items-center justify-between">
+                    <CardTitle>Recent Expenses</CardTitle>
+                    <Button variant="link" asChild className="p-0">
+                      <Link href="/expenses/all">
+                        View all
+                        <ChevronRight className="ml-1 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2">
+                    {monthlySpending
+                      ?.slice()
+                      .reverse()
+                      .filter((m) => m.total > 0)
+                      .slice(0, 3)
+                      .map((month) => (
+                        <div
+                          key={month.month}
+                          className="flex items-center justify-between py-1"
+                        >
+                          <div className="flex items-center gap-2">
+                            <div className="bg-primary/10 p-1.5 rounded-md">
+                              <Receipt className="h-3 w-3 text-primary" />
+                            </div>
+                            <span className="text-sm">
+                              {format(new Date(month.month), "MMMM yyyy")}
+                            </span>
+                          </div>
+                          <span className="text-sm font-medium">
+                            ${month.total.toFixed(2)}
+                          </span>
+                        </div>
+                      ))}
+                    {!monthlySpending?.some((m) => m.total > 0) && (
+                      <p className="text-sm text-muted-foreground text-center py-4">
+                        No expenses yet
+                      </p>
+                    )}
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline" asChild className="w-full">
+                    <Link href="/expenses/all">
+                      <Receipt className="mr-2 h-4 w-4" />
+                      View all expenses
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </Card>
 
               {/* Balance details */}
               <Card>
